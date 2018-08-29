@@ -2,8 +2,9 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "exampledb",
-    "host": "localhost",
+    "database": "ocean_tango",
+    "host": "127.0.0.1",
+    "port": 8889,
     "dialect": "mysql"
   },
   "test": {
