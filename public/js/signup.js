@@ -10,8 +10,12 @@ $(document).ready(function() {
   signUpForm.on("submit", function(event) {
     event.preventDefault();
     var userData = {
+      name: nameInput.val().trim(),
       email: emailInput.val().trim(),
-      password: passwordInput.val().trim()
+      password: passwordInput.val().trim(),
+      address: addressInput.val().trim(),
+      phone: phoneInput.val().trim(),
+      url: urlInput.val().trim()
     };
 
     if (!userData.email || !userData.password) {
@@ -28,7 +32,10 @@ $(document).ready(function() {
   function signUpUser(email, password) {
     $.post("/api/signup", {
       email: email,
-      password: password
+      password: password,
+      address: address,
+      phone: phone,
+      url: url
     })
       .then(function(data) {
         window.location.replace(data);
