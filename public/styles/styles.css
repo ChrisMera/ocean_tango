@@ -5,3 +5,10 @@
 #sign-in-container {
   margin-top: 20px;
 }
+
+/* PASSPORT STYLE ========== */
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+/* PASSPORT STYLE END ======= */
