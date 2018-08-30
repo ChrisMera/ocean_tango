@@ -210,8 +210,12 @@ module.exports = function(app) {
   app.post("/api/signup", function(req, res) {
     console.log(req.body);
     db.User.create({
+      name: req.body.name,
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      address: req.body.password,
+      phone: req.body.phone,
+      url: req.body.url
     })
       .then(function() {
         res.redirect(307, "/api/login");
