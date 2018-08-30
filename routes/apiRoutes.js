@@ -1,9 +1,14 @@
-//require models directory
+// REQUIRES
+// ======================================================
 var db = require("../models");
+var passport = require("../config/passport");
+// REQUIRE END
+// ======================================================
 
 // routes
 module.exports = function(app) {
-  //for education model
+  // EDUCATION
+  // ======================================================
   //find all from education table
   app.get("/api/edu", function(req, res) {
     db.Education.findAll({}).then(function(dbEdu) {
@@ -49,7 +54,10 @@ module.exports = function(app) {
       res.json(dbEdu);
     });
   });
-  //for experience model
+  // EDUCATION END
+  // ======================================================
+  // EXPERIENCE
+  // ======================================================
   //find all from experience table
   app.get("/api/exp", function(req, res) {
     db.Experience.findAll({}).then(function(dbExp) {
@@ -99,6 +107,10 @@ module.exports = function(app) {
       res.json(dbExp);
     });
   });
+  // EXPERIENCE END
+  // ======================================================
+  // REFERENCES
+  // ======================================================
   //for references model
   //find all from references table
   app.get("/api/ref", function(req, res) {
@@ -145,64 +157,16 @@ module.exports = function(app) {
         res.json(dbRef);
       });
   });
-  //for user model
+  // REFERENCES END
+  // ======================================================
+  // USER
+  // ======================================================
   //find all from user table
   app.get("/api/user", function(req, res) {
     db.User.findAll({}).then(function(dbUser) {
       res.json(dbUser);
     });
   });
-  //create for user table
-  app.post("/api/user", function(req, res) {
-    db.User.create({
-      name: req.body.name,
-      address: req.body.address,
-      phone: req.body.phone,
-      email: req.body.email,
-      url: req.body.url
-    }).then(function(dbUser) {
-      res.json(dbUser);
-    });
-  });
-  //destroy for user table
-  app.delete("/api/user/:id", function(req, res) {
-    db.User.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function(dbUser) {
-      res.json(dbUser);
-    });
-  });
-  //update for user table
-  app.put("/api/user", function(req, res) {
-    db.User.update(
-      {
-        name: req.body.name,
-        address: req.body.address,
-        phone: req.body.phone,
-        email: req.body.email,
-        url: req.body.url
-      },
-      {
-        where: {
-          id: req.body.id
-        }
-      }
-    ).then(function(dbUser) {
-      res.json(dbUser);
-    });
-  });
-  //end of .exports
-};
-
-// PASSPORT ROUTES
-// =============================================
-// Requiring our models and passport as we've configured it
-var db = require("../models");
-var passport = require("../config/passport");
-
-module.exports = function(app) {
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     res.json("/members");
   });
@@ -213,7 +177,7 @@ module.exports = function(app) {
       name: req.body.name,
       email: req.body.email,
       password: req.body.password,
-      address: req.body.password,
+      address: req.body.address,
       phone: req.body.phone,
       url: req.body.url
     })
@@ -242,12 +206,52 @@ module.exports = function(app) {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
-        email: req.user.email,
+        name: req.user.email,
         id: req.user.id
       });
     }
   });
-};
 
-// PASSPORT ROUTES END
-// =============================================
+  // //create for user table
+  // app.post("/api/user", function(req, res) {
+  //   db.User.create({
+  //     name: req.body.name,
+  //     address: req.body.address,
+  //     phone: req.body.phone,
+  //     email: req.body.email,
+  //     url: req.body.url
+  //   }).then(function(dbUser) {
+  //     res.json(dbUser);
+  //   });
+  // });
+  // //destroy for user table
+  // app.delete("/api/user/:id", function(req, res) {
+  //   db.User.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(function(dbUser) {
+  //     res.json(dbUser);
+  //   });
+  // });
+  // //update for user table
+  // app.put("/api/user", function(req, res) {
+  //   db.User.update(
+  //     {
+  //       name: req.body.name,
+  //       address: req.body.address,
+  //       phone: req.body.phone,
+  //       email: req.body.email,
+  //       url: req.body.url
+  //     },
+  //     {
+  //       where: {
+  //         id: req.body.id
+  //       }
+  //     }
+  //   ).then(function(dbUser) {
+  //     res.json(dbUser);
+  //   });
+  // });
+  //end of .exports
+};

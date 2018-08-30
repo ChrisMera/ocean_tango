@@ -3,9 +3,9 @@
 $(document).ready(function() {
   // Getting references to our form and input
   var signUpForm = $("form.signup");
+  var nameInput = $("input#name-input");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
-  var nameInput = $("input#name-input");
   var addressInput = $("input#address-input");
   var phoneInput = $("input#phone-input");
   var urlInput = $("input#url-input");
@@ -30,7 +30,7 @@ $(document).ready(function() {
       userData.name,
       userData.email,
       userData.password,
-      userData.addresss,
+      userData.address,
       userData.phone,
       userData.url
     );
