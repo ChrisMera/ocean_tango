@@ -17,41 +17,41 @@
 </nav>
 
 <div class="add-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="box">
-          <h1>Add your education.</h1>
-          <hr>
-          <div class="row justify-content-center">
-            <div class="col-md-9" id="add-new-div">
-              <form>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="newEdu">Institution Name</label>
-                    <input type="text" class="form-control" id="inputNewEdu" placeholder="Institution Name">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="newDegree">Degree/Certificate</label>
-                    <input type="text" class="form-control" id="inputDegree" placeholder="Degree or Certificate Awarded">
-                  </div>
-                </div>
-                <div class="form-row justify-content-center">
-                  <div class="form-group col-md-6">
-                    <label for="inputEduLocation">Location</label>
-                    <input type="text" class="form-control" id="inputEduLocation" placeholder="City, State">
-                  </div>
-                  <div class="form-group col-md-3">
-                    <label for="inputEduStartDate">Start Date</label>
-                    <input type="text" class="form-control" id="inputEduStartDate" placeholder="03/01/18">
-                  </div>
-                  <div class="form-group col-md-3">
-                    <label for="inputEduEndDate">End Date</label>
-                    <input type="text" class="form-control" id="inputEduEndDate" placeholder="08/01/18">
-                  </div>
-                </div>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Add</button>
-              </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <h1>Add your education.</h1>
+                    <hr>
+                    <div class="row justify-content-center">
+                        <div class="col-md-9" id="add-new-div">
+                            <form class="add-edu">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="school-name-input">Institution Name</label>
+                                        <input type="text" class="form-control" id="school-name-input" placeholder="Institution Name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="degree-input">Degree/Certificate</label>
+                                        <input type="text" class="form-control" id="degree-input" placeholder="Degree or Certificate Awarded">
+                                    </div>
+                                </div>
+                                <div class="form-row justify-content-center">
+                                    {{!-- <div class="form-group col-md-6">
+                                        <label for="inputEduLocation">Location</label>
+                                        <input type="text" class="form-control" id="inputEduLocation" placeholder="City, State">
+                                    </div> --}}
+                                    <div class="form-group col-md-6">
+                                        <label for="edu-start-input">Start Date</label>
+                                        <input type="text" class="form-control" id="edu-start-input" placeholder="03/01/18">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="edu-end-input">End Date</label>
+                                        <input type="text" class="form-control" id="edu-end-input" placeholder="08/01/18">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Add</button>
+                            </form>
 
 
               <!-- Modal -->
