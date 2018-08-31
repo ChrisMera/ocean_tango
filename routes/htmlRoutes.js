@@ -19,7 +19,6 @@ module.exports = function(app) {
   // Render 404 page for any unmatched routes
 
   app.get("/", function(req, res) {
-
     // If the user already has an account send them to the members page
     console.log("HERE");
     if (req.user) {
@@ -51,9 +50,9 @@ module.exports = function(app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function(req, res) {
-    res.redirect("/dashboard")
+    res.redirect("/dashboard");
   });
-    
+
   app.get("*", function(req, res) {
     res.render("404");
   });

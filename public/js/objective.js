@@ -1,6 +1,6 @@
 $(function(){
   
-    var title = $('#title'),
+   var title = $('#title'),
         skill1 = $('#skill1'),
         skill2 = $('#skill2'),
         skill3 = $('#skill3'),
