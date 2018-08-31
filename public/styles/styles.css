@@ -62,7 +62,6 @@ hr {
 }
 .box {
   background-color: #e9ede7;
-  height: 600px;
   margin-top: 50px;
   padding: 30px 5px 20px 5px;
   border-radius: 25px;
@@ -88,15 +87,3 @@ h1 {
     margin: 0 80% 0 3%;
   }
 }
-
-#sign-in-container {
-  margin-top: 20px;
-}
-
-/* PASSPORT STYLE ========== */
-form.signup,
-form.login {
-  margin-top: 50px;
-}
-/* PASSPORT STYLE END ======= */
-
