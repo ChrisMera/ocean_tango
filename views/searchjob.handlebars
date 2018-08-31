@@ -1,66 +1,73 @@
 <!--Navbar-->
 <nav id="navbar" class="navbar navbar-light light-blue lighten-4">
 
-    <!-- Navbar brand -->
-    <a class="navbar-brand" href="#">Logo | mySkills</a>
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="#">Logo | mySkills</a>
 
-    <!-- Collapse button -->
-    <button class="navbar-toggler2 toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-        aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-                class="fa fa-bars fa-1x"></i></span></button>
+  <!-- Collapse button -->
+  <button class="navbar-toggler2 toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+  aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+    class="fa fa-bars fa-1x"></i></span></button>
 
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent1">
 
-        <!-- Links -->
-        <ul id="dropdown" class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Dashboard<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Sign Out<span class="sr-only">(current)</span></a>
-            </li>
-        </ul>
-        <!-- Links -->
+      <!-- Links -->
+      <ul id="dropdown" class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Dashboard<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Sign Out<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <!-- Links -->
 
     </div>
     <!-- Collapsible content -->
 
-</nav>
-<!--/.Navbar-->
-<div class="wrapper">
+  </nav>
+  <!--/.Navbar-->
+  <div class="wrapper">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="box2">
-                    <h1>
-                        <div class="input-group md-form form-sm form-2 pl-0">
-                            <input class="form-control my-0 py-1 lime-border" type="text" placeholder="Search" aria-label="Search">
-                            <div class="input-group-append">
-                                <span class="input-group-text lime lighten-2" id="basic-text1"><i class="fa fa-search text-grey"
-                                        aria-hidden="true"></i></span>
-                            </div>
-                    </h1>
-                    <h2>Skills</h2>
-                    <div class="box1">
-                        <span id="search"><a class="btn-floating btn-lg purple-gradient"><i class="fa plus-square-o"></i></a></span>
-                    </div>
-                    <h2>References</h2>
-                    <div class="box3">
-                        <span id="search"><a class="btn-floating btn-lg purple-gradient"><i class="fa plus-square-o"></i></span>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a id="submitsearch" class="btn btn-lg index-button btn-block" href="/login" role="button">Submit</a>
-                        </div>
-                    </div>
-                    </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box">
+            <h1>Search Your Entries</h1>
+            <hr>
+            <div class="row justify-content-center">
+              <div class="col-md-9" id="add-new-div">
+
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="skillSearch-input">Search for a Skill, Reference, or Education</label>
+                    <input type="text" class="form-control" id="skillSearch-input" placeholder="Enter Search here">
+                    <br>
+                    <button type="submit" id="skillSearchBtn" class="btn btn-primary">Search</button>
+                  </div>
                 </div>
+
+                <hr>
+                <div id="allOfSkills">
+                  All Skills results are going to appear here
+                </div>
+                <div id="allOfEdu">
+                  All Education results are going to appear here
+                </div>
+                <div id="allOfRef">
+                  All References results are going to appear here
+                </div>
+
+
+              </div>
             </div>
+
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-</div>
