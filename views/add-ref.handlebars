@@ -1,0 +1,83 @@
+<nav class="navbar sticky-top navbar-expand-lg" id="navbar">
+    <a class="navbar-brand" href="/">Logo | mySkills</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/"><button class="btn btn-sm btn-outline-light" type="button">Log Out</button></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard"><button class="btn btn-sm btn-outline-light" type="button">Dashboard</button></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="add-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <h1>Add a reference.</h1>
+                    <hr>
+                    <div class="row justify-content-center">
+                        <div class="col-md-9" id="add-new-div">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="newRefName">Reference Name</label>
+                                        <input type="text" class="form-control" id="inputNewRefName" placeholder="Reference Name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="newRefOrg">Organization</label>
+                                        <input type="text" class="form-control" id="inputNewRefOrg" placeholder="Organization">
+                                    </div>
+                                </div>
+                                <div class="form-row justify-content-center">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputRefTitle">Title</label>
+                                        <input type="text" class="form-control" id="inputRefTitle" placeholder="Position Held">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputRefNumber">Phone Number</label>
+                                        <input type="text" class="form-control" id="inputRefNumber" placeholder="Contact Number">
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Add</button>
+                            </form>
+
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Success!</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            New Reference Added!
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Continue
+                                                Adding
+                                            </button>
+                                            <a href="/dashboard"><button type="button" class="btn btn-primary">See your entire
+                                                    list
+                                                </button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
