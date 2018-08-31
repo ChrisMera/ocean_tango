@@ -1,4 +1,4 @@
 -- Drops the blogger if it exists currently --
-DROP DATABASE IF EXISTS ocean_tango;
+DROP DATABASE IF EXISTS passport_demo;
 -- Creates the "blogger" database --
-CREATE DATABASE ocean_tango;
+CREATE DATABASE passport_demo;

@@ -16,10 +16,10 @@ module.exports = function(app) {
   app.get("/dashboard", function(req, res) {
     res.render("dashboard");
   });
-
   // Render 404 page for any unmatched routes
 
   app.get("/", function(req, res) {
+
     // If the user already has an account send them to the members page
     console.log("HERE");
     if (req.user) {
@@ -58,5 +58,9 @@ module.exports = function(app) {
     res.render("404");
   });
 };
+
+// PASSPORT ROUTES
+// =============================================
+
 // PASSPORT ROUTES END
 // =============================================
