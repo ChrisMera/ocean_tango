@@ -19,7 +19,6 @@ module.exports = function(app) {
   // Render 404 page for any unmatched routes
 
   app.get("/", function(req, res) {
-
     // If the user already has an account send them to the members page
     console.log("HERE");
     if (req.user) {
@@ -36,6 +35,7 @@ module.exports = function(app) {
     res.render("login");
   });
 
+  //PULLS BACK THE VIEW FOR SIGNUP.HANDLEBARS PAGE
   app.get("/signup", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
@@ -53,7 +53,7 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, function(req, res) {
     res.redirect("/dashboard")
   });
-    
+
   app.get("*", function(req, res) {
     res.render("404");
   });
