@@ -24,8 +24,14 @@ module.exports = function(app) {
   });
 
   //===== Load new-project page
-  app.get("/new-job", function(req, res) {
-    res.render("new-job");
+  app.get("/add-job", function(req, res) {
+    res.render("add-job");
+  });
+  app.get("/add-ref", function(req, res) {
+    res.render("add-ref");
+  });
+  app.get("/add-edu", function(req, res) {
+    res.render("add-edu");
   });
 
   // Render 404 page for any unmatched routes
