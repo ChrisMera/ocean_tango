@@ -29,20 +29,23 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
-  app.get("/sign-up", function(req, res) {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/members");
-    }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+  app.get("/signup", function(req, res) {
+    res.render("login");
   });
+  // app.get("/signup", function(req, res) {
+  //   // If the user already has an account send them to the members page
+  //   // if (req.user) {
+  //   //   res.redirect("/members");
+  //   // }
+  //   res.render("signup");
+  // });
 
   app.get("/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/members");
     }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.render("login");
   });
 
   // Here we've add our isAuthenticated middleware to this route.

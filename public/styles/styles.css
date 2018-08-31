@@ -80,7 +80,7 @@ h1 {
 }
 @media screen and (min-width: 1055px) {
   .navbar-brand {
-    margin: 0 73% 0 1%;
+    margin: 0 80% 0 1%;
   }
 }
 @media screen and (min-width: 1410px) {
@@ -88,15 +88,3 @@ h1 {
     margin: 0 80% 0 3%;
   }
 }
-
-#sign-in-container {
-  margin-top: 20px;
-}
-
-/* PASSPORT STYLE ========== */
-form.signup,
-form.login {
-  margin-top: 50px;
-}
-/* PASSPORT STYLE END ======= */
-
