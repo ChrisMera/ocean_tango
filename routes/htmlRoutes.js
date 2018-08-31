@@ -47,6 +47,9 @@ module.exports = function(app) {
   app.get("/add-edu", function(req, res) {
     res.render("add-edu");
   });
+  app.get("/searchjob", function(req, res) {
+    res.render("searchjob");
+  });
   // Render 404 page for any unmatched routes
   app.get("/objective", function(req, res) {
     res.render("objective");
