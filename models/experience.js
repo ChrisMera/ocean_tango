@@ -17,7 +17,9 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     endDate: DataTypes.DATEONLY,
-    asscSkills: { type: DataTypes.STRING },
+    asscSkills: {
+      type: DataTypes.STRING
+    },
     expType: DataTypes.STRING
   });
   return Experience;
