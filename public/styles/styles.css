@@ -67,66 +67,11 @@ hr {
   padding: 30px 5px 20px 5px;
   border-radius: 25px;
 }
-.box1 {
-  background-color: white;
-  height: 300px;
-  width: 500px;
-  padding: 0px 0px 0px 0px;
-  border-radius: 25px;
-  margin: 25px 300px;
-}
 h1 {
   text-align: center;
   font-size: 63px;
   font-weight: 300;
   color: #17334a;
-}
-#submitsearch {
-  background-color: #17334a;
-  color: #e9ede7;
-  font-size: 22px;
-  font-weight: 350;
-  margin: 10px 280px;
-}
-.box2 {
-  background-color: #e9ede7;
-  height: auto;
-  margin-top: 50px;
-  padding: 30px 5px 20px 5px;
-  border-radius: 25px;
-}
-h2 {
-  text-align: center;
-  font-size: 63px;
-  font-weight: 300;
-  color: #17334a;
-}
-.box3 {
-  background-color: white;
-  height: 300px;
-  width: 500px;
-  padding: 0px 0px 0px 0px;
-  border-radius: 25px;
-  margin: 25px 300px;
-}
-.navbar-toggler2 {
-  color: #e9ede7;
-  background-color: "none";
-  padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-}
-.navbar-light .navbar-brand {
-  color: #e9ede7;
-}
-.navbar-light .navbar-nav .active > .nav-link,
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .show > .nav-link {
-  color: #e9ede7;
 }
 @media screen and (min-width: 992px) {
   .navbar-brand {
@@ -143,3 +88,15 @@ h2 {
     margin: 0 80% 0 3%;
   }
 }
+
+#sign-in-container {
+  margin-top: 20px;
+}
+
+/* PASSPORT STYLE ========== */
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+/* PASSPORT STYLE END ======= */
+
