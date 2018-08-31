@@ -35,6 +35,15 @@ module.exports = function(app) {
     res.render("login");
   });
 
+  
+app.get("/searchjob", function(req, res) {
+  // If the user already has an account send them to the members page
+  if (req.user) {
+    res.redirect("/members");
+  }
+  res.render("searchjob");
+});
+
   //PULLS BACK THE VIEW FOR SIGNUP.HANDLEBARS PAGE
   app.get("/signup", function(req, res) {
     // If the user already has an account send them to the members page
@@ -58,6 +67,7 @@ module.exports = function(app) {
     res.render("404");
   });
 };
+
 
 // PASSPORT ROUTES
 // =============================================
