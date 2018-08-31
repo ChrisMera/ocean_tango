@@ -71,7 +71,7 @@ module.exports = function(app) {
       role: req.body.degree,
       startDate: req.body.startDate,
       endDate: req.body.endDate,
-      skills: req.body.assSkills,
+      skills: req.body.asscSkills,
       type: req.body.expType
     }).then(function(dbExp) {
       res.json(dbExp);
