@@ -1,40 +1,45 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/"><img src="/images/Logo1.jpg" alt="logo"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      {{!-- <li class="nav-item">
-        <a class="nav-link" href="/login">Login</a>
-      </li> --}}
-       
-        <li class="nav-item">
-          <a class="nav-link" href="/login"><button class="btn btn-sm btn-outline-primary" type="button">Login</button></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sign-up"><button class="btn btn-sm btn-outline-primary" type="button">Sign Up</button></a>
-        </li>
-      
-    </ul>
-    {{!-- <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> --}}
-  </div>
+<nav class="navbar sticky-top navbar-expand-lg" id="navbar">
+  <a class="navbar-brand" href="/">Logo | mySkills</a>
+  
 </nav>
 
-<div class="container">
-  <div class="jumbotron">
-    <h1 class="display-4">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
-      content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    {{!-- <a class="btn btn-primary btn-lg" id="login" href="/login" role="button">Login</a> --}}
-    <a class="btn btn-warning btn-lg btn-block" id="sign-up" href="#" role="button">SIGN UP FOR RESUME BUILDER</a>
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box">
+          <h1>Start Building Your Resume</h1>
+          <hr>
+            <div class="row justify-content-center" id="benefits-container">
+              <div class="col-md-3">
+                <i class="far fa-check-circle fa-2x"></i>
+                <p class="index-text">Easy To Use - Add your past job experiences and references and we do the rest. Plus, we save it all for you for future resume's!</p>
+              </div>
+              <div class="col-md-3">
+                <i class="far fa-check-circle fa-2x"></i>
+                <p class="index-text">Fast - Choose which job experiences and skills you want to include in your resume and we will make a resume for you!</p>
+              </div>
+              <div class="col-md-3">
+                <i class="far fa-check-circle fa-2x"></i>
+                <p class="index-text">Free - Absolutely no cost or fees required to sign up and use our resume builder!</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-8" id="index-button-div">
+                <div class="row">
+                  <div class="col-md-6">
+                    <a class="btn btn-lg index-button btn-block" href="/signup" role="button">Sign Up</a>
+                  </div>
+                  <div class="col-md-6">
+                    <a class="btn btn-lg index-button btn-block" href="/dashboard" role="button">Dashboard</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
