@@ -3,12 +3,12 @@
 $(document).ready(function() {
   // Getting references to our form and input
   var signUpForm = $("form.signup");
-  var nameInput = $("input#name-input");
-  var emailInput = $("input#email-input");
-  var passwordInput = $("input#password-input");
-  var addressInput = $("input#address-input");
-  var phoneInput = $("input#phone-input");
-  var urlInput = $("input#url-input");
+  var nameInput = $("#name-input");
+  var emailInput = $("#email-input");
+  var passwordInput = $("#password-input");
+  var addressInput = $("#address-input");
+  var phoneInput = $("#phone-input");
+  var urlInput = $("#url-input");
 
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", function(event) {
@@ -21,6 +21,8 @@ $(document).ready(function() {
       phone: phoneInput.val().trim(),
       url: urlInput.val().trim()
     };
+
+    console.log(userData);
 
     if (!userData.email || !userData.password) {
       return;

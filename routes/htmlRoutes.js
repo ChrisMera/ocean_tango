@@ -10,10 +10,17 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     res.render("index");
   });
-
+  // Load index page
+  app.get("/sign-up", function(req, res) {
+    res.render("signup");
+  });
   // Load login page
   app.get("/login", function(req, res) {
     res.render("login");
+  });
+  //===== Load dashboard page
+  app.get("/dashboard", function(req, res) {
+    res.render("dashboard");
   });
 
   //===== Load new-project page
@@ -21,16 +28,9 @@ module.exports = function(app) {
     res.render("new-job");
   });
 
-  //===== Load dashboard page
-  app.get("/dashboard", function(req, res) {
-    res.render("dashboard");
-  });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
-  });
-  app.get("/signup", function(req, res) {
-    res.render("login");
   });
   // app.get("/signup", function(req, res) {
   //   // If the user already has an account send them to the members page
@@ -40,13 +40,13 @@ module.exports = function(app) {
   //   res.render("signup");
   // });
 
-  app.get("/login", function(req, res) {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/members");
-    }
-    res.render("login");
-  });
+  // app.get("/login", function(req, res) {
+  //   // If the user already has an account send them to the members page
+  //   if (req.user) {
+  //     res.redirect("/members");
+  //   }
+  //   res.render("login");
+  // });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
