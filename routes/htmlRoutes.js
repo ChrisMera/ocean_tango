@@ -1,11 +1,14 @@
-// PASSPORT ROUTES
-// =============================================
+// REQUIRES
+// ======================================================
 // Requiring path to so we can use relative routes to our HTML files
 // var path = require("path");
 
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
-
+// REQUIRE END
+// ======================================================
+// ROUTES
+// ======================================================
 module.exports = function(app) {
   //===== Load new-project page
   app.get("/", function(req, res) {
@@ -59,9 +62,5 @@ module.exports = function(app) {
     res.render("404");
   });
 };
-
-// PASSPORT ROUTES
-// =============================================
-
-// PASSPORT ROUTES END
-// =============================================
+// ROUTES END
+// ======================================================

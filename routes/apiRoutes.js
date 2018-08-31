@@ -5,7 +5,8 @@ var passport = require("../config/passport");
 // REQUIRE END
 // ======================================================
 
-// routes
+// ROUTES
+// ======================================================
 module.exports = function(app) {
   // EDUCATION
   // ======================================================
@@ -67,12 +68,13 @@ module.exports = function(app) {
   //create for experience table
   app.post("/api/exp", function(req, res) {
     db.Experience.create({
-      name: req.body.school,
-      role: req.body.degree,
+      name: req.body.name,
+      role: req.body.role,
+      description: req.body.description,
       startDate: req.body.startDate,
       endDate: req.body.endDate,
-      skills: req.body.asscSkills,
-      type: req.body.expType
+      asscSkills: req.body.asscSkills,
+      expType: req.body.expType
     }).then(function(dbExp) {
       res.json(dbExp);
     });
@@ -91,12 +93,13 @@ module.exports = function(app) {
   app.put("/api/exp", function(req, res) {
     db.Experience.update(
       {
-        name: req.body.school,
-        role: req.body.degree,
+        name: req.body.name,
+        role: req.body.role,
+        description: req.body.description,
         startDate: req.body.startDate,
         endDate: req.body.endDate,
-        skills: req.body.assSkills,
-        type: req.body.expType
+        asscSkills: req.body.asscSkills,
+        expType: req.body.expType
       },
       {
         where: {
@@ -211,47 +214,4 @@ module.exports = function(app) {
       });
     }
   });
-
-  // //create for user table
-  // app.post("/api/user", function(req, res) {
-  //   db.User.create({
-  //     name: req.body.name,
-  //     address: req.body.address,
-  //     phone: req.body.phone,
-  //     email: req.body.email,
-  //     url: req.body.url
-  //   }).then(function(dbUser) {
-  //     res.json(dbUser);
-  //   });
-  // });
-  // //destroy for user table
-  // app.delete("/api/user/:id", function(req, res) {
-  //   db.User.destroy({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   }).then(function(dbUser) {
-  //     res.json(dbUser);
-  //   });
-  // });
-  // //update for user table
-  // app.put("/api/user", function(req, res) {
-  //   db.User.update(
-  //     {
-  //       name: req.body.name,
-  //       address: req.body.address,
-  //       phone: req.body.phone,
-  //       email: req.body.email,
-  //       url: req.body.url
-  //     },
-  //     {
-  //       where: {
-  //         id: req.body.id
-  //       }
-  //     }
-  //   ).then(function(dbUser) {
-  //     res.json(dbUser);
-  //   });
-  // });
-  //end of .exports
 };
