@@ -1,9 +1,9 @@
-// PASSPORT addJob
+// PASSPORT SIGNUP
 // =============================================
 $(document).ready(function() {
   // Getting references to our form and input
-  var addJobForm = $("form.add-job");
-  var typeInput = $("select#new-type-select");
+  var addRefForm = $("form.add-ref");
+  var refNameInput = $("input#new-type-select");
   var jobName = $("input#job-name-input");
   var roleInput = $("input#role-input");
   var startDateInput = $("input#start-input");
@@ -11,8 +11,8 @@ $(document).ready(function() {
   var descriptionInput = $("input#description-input");
   var skillsInput = $("input#skills-input");
 
-  // When the submit button is clicked, we validate the name and skills are not blank
-  addJobForm.on("submit", function(event) {
+  // When the signup button is clicked, we validate the email and password are not blank
+  addRefForm.on("submit", function(event) {
     event.preventDefault();
     var userData = {
       expType: typeInput.val(),
@@ -28,7 +28,7 @@ $(document).ready(function() {
     if (!userData.name || !userData.asscSkills) {
       return;
     }
-    // If we have an project name and asscSkill, run the addJob function
+    // If we have an project bame and asscSkill, run the addJob function
     addJob(
       userData.expType,
       userData.name,
@@ -47,7 +47,7 @@ $(document).ready(function() {
     skillsInput.val("");
   });
 
-  // Does a post to the exp route. If successful, we notify user
+  // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
   function addJob(
     name,
@@ -58,7 +58,7 @@ $(document).ready(function() {
     asscSkills,
     expType
   ) {
-    $.post("/api/exp", {
+    $.post("/api/ref", {
       name: name,
       role: role,
       description: description,
@@ -66,7 +66,7 @@ $(document).ready(function() {
       endDate: endDate,
       asscSkills: asscSkills,
       expType: expType
-    }).then(function(data) {
+    }).then(function (data) {
       window.location.replace(data);
       // If there's an error, handle it by throwing up a boostrap alert
     });
