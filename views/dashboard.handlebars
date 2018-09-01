@@ -2,7 +2,7 @@
   <p class="navbar-brand" href="/">Logo | mySkills</p>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
   aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
+  <span class="navbar-toggler-icon">Menu</span>
 </button>
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -29,28 +29,28 @@
     <div class="row">
       <div class="col-md-12">
         <div class="box">
-          <h1>Welcome <span class="user-name">[user name]</span>!</h1>
+          <h1>Welcome <span class="user-name"></span><span class="welcome-msg">- Let's get to work</span>!</h1>
           <hr>
           <div class="row">
             <div class="col-md-9" id="index-button-div">
               <div class="row justify-content-center">
                 <div class="col-md-4">
-                  <a class="btn btn-lg dash-button btn-block" href="/searchjob" role="button">Search Past Job Info</a>
-                  <p class="dash-text">Search your past jobs for the skills that you are focusing your resume around.</p>
-                </div>
-                <div class="col-md-4">
-                  <a class="btn btn-lg dash-button btn-block" href="/add-job" role="button">Add New Job Info</a>
+                  <a class="btn btn-lg dash-button btn-block" href="/add-job" role="button">Add New Job Info <i class="fas fa-plus-circle"></i></a>
                   <p class="dash-text">Add new information on your past job(s) with a focus on the skills you utilized there.</p>
                 </div>
                 <div class="col-md-4">
-                  <a class="btn btn-lg dash-button btn-block" href="/add-ref" role="button">Add New Reference</a>
+                  <a class="btn btn-lg dash-button btn-block" href="/add-ref" role="button">Add Reference <i class="fas fa-plus-circle"></i></a>
                   <p class="dash-text">Add new information for any references you may have.</p>
                 </div>
-              </div>
-              <div class="row justify-content-center">
                 <div class="col-md-4">
-                  <a class="btn btn-lg dash-button btn-block" href="/add-edu" role="button">Add Education</a>
+                  <a class="btn btn-lg dash-button btn-block" href="/add-edu" role="button">Add Education <i class="fas fa-plus-circle"></i></a>
                   <p class="dash-text">Add your past education.</p>
+                </div>
+              </div>
+              <div class="row justify-content-center" id="dash-search">
+                <div class="col-md-5">
+                  <a class="btn btn-lg dash-button btn-block" id="dash-search-btn" href="/searchjob" role="button">Search Past Job Info <i class="fas fa-search"></i></a>
+                  <p class="dash-text">Search your past jobs for the skills that you are focusing your resume around.</p>
                 </div>
               </div>
             </div>
