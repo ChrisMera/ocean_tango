@@ -60,11 +60,28 @@ module.exports = function(app) {
   // EXPERIENCE
   // ======================================================
   //find all from experience table
-  app.get("/api/exp", function(req, res) {
+
+  //THIS IS WHAT YOU ARE WORKING ON JESSICA
+  //========================================
+  app.get("/api/searchjob", function(req, res) {
     db.Experience.findAll({}).then(function(dbExp) {
       res.json(dbExp);
     });
   });
+  //RETURNING DATA FROM EXPERIENCE TABLE IN DB
+  app.get("/api/searchedu", function(req, res) {
+    db.Education.findAll({}).then(function(dbEdu) {
+      res.json(dbEdu);
+    });
+  });
+
+  app.get("/api/searchref", function(req, res) {
+    db.References.findAll({}).then(function(dbRef) {
+      res.json(dbRef);
+    });
+  });
+  //==========================================
+
   //create for experience table
   app.post("/api/exp", function(req, res) {
     db.Experience.create({
