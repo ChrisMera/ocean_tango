@@ -5,7 +5,7 @@ body {
 .wrapper {
   background-image: url("https://images.unsplash.com/photo-1522223142907-0fbfb9c571c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b7a69d28bf8e5030872cb254ba06efbd&auto=format&fit=crop&w=2500&q=80");
   background-size: cover;
-  height: 1000px;
+  height: 100vh;
 }
 #navbar {
   background-color: #5096b8;
@@ -29,6 +29,13 @@ body {
   font-size: 22px;
   font-weight: 300;
 }
+.sign-up-btn {
+  background-color: #17334a;
+  color: #e9ede7;
+  font-size: 22px;
+  font-weight: 300;
+  margin-top: 25px;
+}
 .dash-button {
   background-color: #53afb1;
   color: #e9ede7;
@@ -49,6 +56,9 @@ body {
 hr {
   width: 80%;
 }
+.sign-up-hr {
+  width: 100%;
+}
 #benefits-container {
   padding: 20px;
   display: flex;
@@ -62,14 +72,20 @@ hr {
 }
 .box {
   background-color: #e9ede7;
-  height: 600px;
+  height: 100%;
   margin-top: 50px;
-  padding: 30px 5px 20px 5px;
+  padding: 30px 5px 5px 5px;
   border-radius: 25px;
 }
 h1 {
   text-align: center;
   font-size: 63px;
+  font-weight: 300;
+  color: #17334a;
+}
+h2 {
+  text-align: center;
+  font-size: 50px;
   font-weight: 300;
   color: #17334a;
 }
@@ -88,15 +104,3 @@ h1 {
     margin: 0 80% 0 3%;
   }
 }
-
-#sign-in-container {
-  margin-top: 20px;
-}
-
-/* PASSPORT STYLE ========== */
-form.signup,
-form.login {
-  margin-top: 50px;
-}
-/* PASSPORT STYLE END ======= */
-
