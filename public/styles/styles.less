@@ -49,6 +49,10 @@ body {
     font-weight: 300;
 }
 
+.index-button:hover {
+    color: @color2;
+}
+
 .sign-up-btn {
     background-color: @color1;
     color: @color2;
@@ -146,6 +150,9 @@ h2 {
     .navbar-brand {
         margin: 0 78% 0 1%;
     }
+    .index-text {
+        font-size: 19px;
+    }
     .dash-button {
     background-color: @color4;
     color: @color2;
@@ -168,6 +175,12 @@ h2 {
 @media screen and (max-width: 992px) {
     .navbar-brand {
         margin: 0 78% 0 0%;
+    }
+    .index-text {
+        font-size: 21px;
+    }
+    .index-text-span {
+        display: none;
     }
     .dash-button {
     background-color: @color4;
@@ -199,5 +212,17 @@ h2 {
 @media screen and (max-width: 767px){
     .welcome-msg {
         display: none;
+    }
+    .index-text-span {
+        display: inline;
+    }
+    .index-button {
+        margin-bottom: 20px;
+    }
+    .box {
+        height: 100vh;
+    }
+    .wrapper {
+        height: 1000px;
     }
 }
