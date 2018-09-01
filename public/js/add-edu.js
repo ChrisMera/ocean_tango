@@ -49,9 +49,9 @@ $(document).ready(function() {
     });
     //   .catch(handleLoginErr);
   }
-
-  function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
-  }
+  //THIS WAS GIVING A LINT ERROR - WAS DEFINED BUT NOT CALLED
+  // function handleLoginErr(err) {
+  //   $("#alert .msg").text(err.responseJSON);
+  //   $("#alert").fadeIn(500);
+  // }
 });

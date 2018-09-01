@@ -52,16 +52,15 @@ $(document).ready(function() {
       address: address,
       phone: phone,
       url: url
-    })
-      .then(function(data) {
-        window.location.replace(data);
-        // If there's an error, handle it by throwing up a boostrap alert
-      })
-      .catch(handleLoginErr);
+    }).then(function(data) {
+      window.location.replace(data);
+      // If there's an error, handle it by throwing up a boostrap alert
+    });
+    // .catch(handleLoginErr);
   }
 
-  function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
-  }
+  // function handleLoginErr(err) {
+  //   $("#alert .msg").text(err.responseJSON);
+  //   $("#alert").fadeIn(500);
+  // }
 });
