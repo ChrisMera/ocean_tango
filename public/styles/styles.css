@@ -126,6 +126,15 @@ hr {
   padding: 30px 5px 0 5px;
   border-radius: 25px;
 }
+.show {
+  background: #5096b8;
+  border: none;
+}
+.dropdown-item {
+  color: #e9ede7;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
 h1 {
   text-align: center;
   font-size: 63px;
