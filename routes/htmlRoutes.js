@@ -50,6 +50,9 @@ module.exports = function(app) {
   app.get("/searchjob", function(req, res) {
     res.render("searchjob");
   });
+  app.get("/resume", function(req, res) {
+    res.render("resume");
+  });
   // Render 404 page for any unmatched routes
   app.get("/objective", function(req, res) {
     res.render("objective");
