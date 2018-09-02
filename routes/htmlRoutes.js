@@ -29,13 +29,20 @@ module.exports = function(app) {
   });
 
   app.get("/searchjob", function(req, res) {
-    // If the user already has an account send them to the members page
+    // renders searchjob page
     if (req.user) {
       res.redirect("/members");
     }
     res.render("searchjob");
   });
 
+  app.get("/resume", function(req, res) {
+    // upon hitting the submit button the resumepdf page will display
+    if (req.user) {
+      res.redirect("/members");
+    }
+    res.render("resume");
+  });
   //PULLS BACK THE VIEW FOR SIGNUP.HANDLEBARS PAGE
   app.get(
     "/signup",
