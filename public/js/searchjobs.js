@@ -2,6 +2,7 @@
 //DOC READY
 $(document).ready(function() {
   var expKeyWord;
+
   var jobDiv = $("#allOfSkills");
 
   var jobs = [];
@@ -27,10 +28,16 @@ $(document).ready(function() {
       [
         "<div>",
         jobs.role,
-        jobs.startDate,
-        jobs.endDate,
+        "</div>",
+        "<br>",
+        "<div>",
+        jobs.startDate + " - " + jobs.endDate,
+        "</div>",
+        "<br>",
+        "<div>",
         jobs.description,
-        "</div>"
+        "</div>",
+        "<br>"
       ].join("")
     );
     return newJobRow;
@@ -61,10 +68,16 @@ $(document).ready(function() {
       [
         "<div>",
         edu.school,
-        edu.startDate,
-        edu.endDate,
-        edu.degree,
-        "</div>"
+        "</div>",
+        "<br>",
+        "<div>",
+        edu.startDate + " - " + edu.endDate,
+        "</div>",
+        "<br>",
+        "<div>",
+        jobs.description,
+        "</div>",
+        "<br>"
       ].join("")
     );
     return newEduRow;
@@ -92,7 +105,20 @@ $(document).ready(function() {
 
   function createNewRefRow(refs) {
     var newRefRow = $(
-      ["<div>", refs.name, refs.phone, refs.relationship, "</div>"].join("")
+      [
+        "<div>",
+        refs.name,
+        "</div>",
+        "<br>",
+        "<div>",
+        refs.relationship,
+        "</div>",
+        "<br>",
+        "<div>",
+        refs.phone,
+        "</div>",
+        "<br>"
+      ].join("")
     );
     return newRefRow;
   }

@@ -7,8 +7,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     degree: { type: DataTypes.STRING },
     startDate: {
-      type: DataTypes.DATEONLY,
-      allowNull: false
+      type: DataTypes.DATEONLY
     },
     endDate: DataTypes.DATEONLY
   });
