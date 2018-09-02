@@ -1,74 +1,93 @@
-<nav class="navbar sticky-top navbar-expand-lg" id="navbar">
-  <p class="navbar-brand">Logo | mySkills</p>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-  aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon">Menu</span>
-</button>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/dashboard"><button class="btn btn-sm btn-outline-light" type="button">Dashboard</button></a>
-    </li>
-  </ul>
-</div>
-</nav>
+<!-- NAV -->
+  <nav class="navbar sticky-top navbar-expand-lg" id="navbar">
+    <p class="navbar-brand" href="/">Logo | mySkills</p>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">Menu</span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Options
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/add-job">Add Job</a>
+          <a class="dropdown-item" href="/add-ref">Add Reference</a>
+          <a class="dropdown-item" href="/add-edu">Add Education</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/searchjob">Search</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/logout">Sign Out</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+<!-- END NAV -->
 
 <div class="add-wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="box">
-                    <h1>Add a new job or project.</h1>
-                    <hr>
-                    <div class="row justify-content-center">
-                        <div class="col-md-9" id="add-new-div">
-                            <form class="add-job">
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="new-type-select">Select Type</label>
-                                        <select id="new-type-select" class="form-control">
-                                            <option selected>Choose...</option>
-                                            <option>Job</option>
-                                            <option>Project</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="job-name-input">Job/Project Name</label>
-                                        <input type="text" class="form-control" id="job-name-input" placeholder="Job/Project Name">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="role-input">Title/Role</label>
-                                        <input type="text" class="form-control" id="role-input" placeholder="Position Held">
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="start-input">Start Date</label>
-                                        <input type="text" class="form-control" id="start-input" placeholder="03/01/18">
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="end-input">End Date</label>
-                                        <input type="text" class="form-control" id="end-input" placeholder="08/01/18">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <label for="description-input">Description</label>
-                                        <input type="text" class="form-control" id="description-input" placeholder="Describe what you accomplished">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <label for="skills-input">Skills</label>
-                                        <input type="text" class="form-control" id="skills-input" placeholder="What skills did you use or gain?">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                  <div class="col-md-2">
-                                    <button type="submit" class="btn btn-md add-new-btn btn-block" data-toggle="modal" data-target="#exampleModalCenter">Add</button>
-                                  </div>
-                                </div>
-                            </form>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box">
+          <h1>Add a new job or project.</h1>
+          <hr>
+          <div class="row justify-content-center">
+            <div class="col-md-9" id="add-new-div">
+              <form class="add-job">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="new-type-select">Select Type</label>
+                    <select id="new-type-select" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>Job</option>
+                      <option>Project</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="job-name-input">Job/Project Name</label>
+                    <input type="text" class="form-control" id="job-name-input" placeholder="Job/Project Name">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="role-input">Title/Role</label>
+                    <input type="text" class="form-control" id="role-input" placeholder="Position Held">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="start-input">Start Date</label>
+                    <input type="text" class="form-control" id="start-input" placeholder="03/01/18">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="end-input">End Date</label>
+                    <input type="text" class="form-control" id="end-input" placeholder="08/01/18">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="description-input">Description</label>
+                    <input type="text" class="form-control" id="description-input" placeholder="Describe what you accomplished">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="skills-input">Skills</label>
+                    <input type="text" class="form-control" id="skills-input" placeholder="What skills did you use or gain?">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-2">
+                    <button type="submit" class="btn btn-md add-new-btn btn-block" data-toggle="modal" data-target="#exampleModalCenter">Add</button>
+                  </div>
+                </div>
+              </form>
 
 
               <!-- Modal -->
@@ -102,8 +121,8 @@
     </div>
 
 
-<footer class="footer">
-  <div class="container">
-    <p>Skill Team 4 &copy 2018 | <a class="github-link" href="https://github.com/bmjanuska/ocean_tango">Github Repo</a></p>
-  </div>
-</footer>
+    <footer class="footer">
+      <div class="container">
+        <p>Skill Team 4 &copy 2018 | <a class="github-link" href="https://github.com/bmjanuska/ocean_tango">Github Repo</a></p>
+      </div>
+    </footer>
