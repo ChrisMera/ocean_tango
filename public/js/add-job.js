@@ -24,7 +24,6 @@ $(document).ready(function() {
       expType: typeInput.val()
     };
     console.log("THIS IS A USER: " + userData);
-
     if (!userData.name || !userData.asscSkills) {
       return;
     }

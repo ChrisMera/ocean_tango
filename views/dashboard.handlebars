@@ -2,25 +2,15 @@
   <p class="navbar-brand" href="/">Logo | mySkills</p>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
   aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
+  <span class="navbar-toggler-icon">Menu</span>
 </button>
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav">
-    {{!--
-    <li class="nav-item">
-    <a class="nav-link" href="/login">Login</a>
-  </li> --}}
   <li class="nav-item">
     <a class="nav-link" href="/"><button class="btn btn-sm btn-outline-light" type="button">Log Out</button></a>
   </li>
-
-</ul>
-{{!--
-<form class="form-inline my-2 my-lg-0">
-<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-</form> --}}
+  </ul>
 </div>
 </nav>
 
@@ -29,28 +19,28 @@
     <div class="row">
       <div class="col-md-12">
         <div class="box">
-          <h1>Welcome <span class="user-name">[user name]</span>!</h1>
+          <h1>Welcome <span class="user-name"></span><span class="welcome-msg">- Let's get to work</span>!</h1>
           <hr>
           <div class="row">
             <div class="col-md-9" id="index-button-div">
               <div class="row justify-content-center">
                 <div class="col-md-4">
-                  <a class="btn btn-lg dash-button btn-block" href="/searchjob" role="button">Search Past Job Info</a>
-                  <p class="dash-text">Search your past jobs for the skills that you are focusing your resume around.</p>
-                </div>
-                <div class="col-md-4">
-                  <a class="btn btn-lg dash-button btn-block" href="/add-job" role="button">Add New Job Info</a>
+                  <a class="btn btn-lg dash-button btn-block" href="/add-job" role="button"><i class="fas fa-plus-circle"></i> Add New Job Info</a>
                   <p class="dash-text">Add new information on your past job(s) with a focus on the skills you utilized there.</p>
                 </div>
                 <div class="col-md-4">
-                  <a class="btn btn-lg dash-button btn-block" href="/add-ref" role="button">Add New Reference</a>
+                  <a class="btn btn-lg dash-button btn-block" href="/add-ref" role="button"><i class="fas fa-plus-circle"></i> Add Reference</a>
                   <p class="dash-text">Add new information for any references you may have.</p>
                 </div>
-              </div>
-              <div class="row justify-content-center">
                 <div class="col-md-4">
-                  <a class="btn btn-lg dash-button btn-block" href="/add-edu" role="button">Add Education</a>
+                  <a class="btn btn-lg dash-button btn-block" href="/add-edu" role="button"><i class="fas fa-plus-circle"></i> Add Education</a>
                   <p class="dash-text">Add your past education.</p>
+                </div>
+              </div>
+              <div class="row justify-content-center" id="dash-search">
+                <div class="col-md-5">
+                  <a class="btn btn-lg dash-button btn-block" id="dash-search-btn" href="/searchjob" role="button"><i class="fas fa-search"></i> Search Past Job Info</a>
+                  <p class="dash-text">Search your past jobs for the skills that you are focusing your resume around.</p>
                 </div>
               </div>
             </div>
@@ -60,3 +50,9 @@
     </div>
   </div>
 </div>
+
+<footer class="footer">
+  <div class="container">
+    <p>Skill Team 4 &copy 2018 | <a class="github-link" href="https://github.com/bmjanuska/ocean_tango">Github Repo</a></p>
+  </div>
+</footer>

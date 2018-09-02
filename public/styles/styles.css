@@ -1,8 +1,6 @@
 body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-}
-.wrapper {
   background-image: url("https://images.unsplash.com/photo-1522223142907-0fbfb9c571c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b7a69d28bf8e5030872cb254ba06efbd&auto=format&fit=crop&w=2500&q=80");
   background-size: cover;
   height: 100vh;
@@ -15,19 +13,40 @@ body {
   padding: 0;
 }
 .navbar-toggler {
-  background-color: #17334a;
+  border: 1px solid #e9ede7;
 }
 .navbar-brand {
   color: #e9ede7;
 }
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #e9ede7;
+}
+.github-link {
+  color: #e9ede7;
+}
+.github-link:hover {
+  color: #e9ede7;
+}
 #index-button-div {
   margin: 20px auto 15px;
+}
+#dash-search {
+  margin-top: 30px;
+  margin-bottom: 0;
+  text-align: center;
 }
 .index-button {
   background-color: #17334a;
   color: #e9ede7;
   font-size: 22px;
   font-weight: 300;
+}
+.index-button:hover {
+  color: #e9ede7;
 }
 .sign-up-btn {
   background-color: #17334a;
@@ -41,6 +60,35 @@ body {
   color: #e9ede7;
   font-size: 22px;
   font-weight: 350;
+}
+.dash-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  color: #e9ede7;
+}
+.add-new-btn {
+  background-color: #53afb1;
+  color: #e9ede7;
+  font-size: 18px;
+  font-weight: 350;
+}
+.add-new-btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  color: #e9ede7;
+}
+.continue-add-btn {
+  background-color: #53afb1;
+  color: #e9ede7;
+  font-size: 18px;
+  font-weight: 350;
+}
+.see-all-btn {
+  background-color: #316a8c;
+  color: #e9ede7;
+  font-size: 18px;
+  font-weight: 350;
+}
+#dash-search-btn {
+  background-color: #316a8c;
 }
 .index-text {
   font-size: 22px;
@@ -74,7 +122,7 @@ hr {
   background-color: #e9ede7;
   height: 100%;
   margin-top: 50px;
-  padding: 30px 5px 5px 5px;
+  padding: 30px 5px 0 5px;
   border-radius: 25px;
 }
 h1 {
@@ -89,18 +137,86 @@ h2 {
   font-weight: 300;
   color: #17334a;
 }
-@media screen and (min-width: 992px) {
-  .navbar-brand {
-    margin: 0 70% 0 1%;
-  }
-}
-@media screen and (min-width: 1055px) {
-  .navbar-brand {
-    margin: 0 73% 0 1%;
-  }
-}
-@media screen and (min-width: 1410px) {
+@media screen and (max-width: 2000px) {
   .navbar-brand {
     margin: 0 80% 0 3%;
+  }
+}
+@media screen and (max-width: 1370px) {
+  .navbar-brand {
+    margin: 0 82% 0 1%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .navbar-brand {
+    margin: 0 78% 0 1%;
+  }
+  .index-text {
+    font-size: 19px;
+  }
+  .dash-button {
+    background-color: #53afb1;
+    color: #e9ede7;
+    font-size: 19px;
+    font-weight: 350;
+  }
+  .dash-text {
+    font-size: 18px;
+    padding: 8px;
+    color: #17334a;
+  }
+  h1 {
+    text-align: center;
+    font-size: 58px;
+    font-weight: 300;
+    color: #17334a;
+  }
+}
+@media screen and (max-width: 992px) {
+  .navbar-brand {
+    margin: 0 78% 0 0%;
+  }
+  .index-text {
+    font-size: 21px;
+  }
+  .index-text-span {
+    display: none;
+  }
+  .dash-button {
+    background-color: #53afb1;
+    color: #e9ede7;
+    font-size: 17px;
+    font-weight: 350;
+  }
+  .fa-plus-circle {
+    display: none;
+  }
+  .dash-text {
+    font-size: 17px;
+    padding: 8px;
+    color: #17334a;
+    text-align: center;
+  }
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 300;
+    color: #17334a;
+  }
+  .navbar-toggler-icon {
+    color: #e9ede7;
+    font-size: 10px;
+    padding-right: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .welcome-msg {
+    display: none;
+  }
+  .index-text-span {
+    display: inline;
+  }
+  .index-button {
+    margin-bottom: 20px;
   }
 }
