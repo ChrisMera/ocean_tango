@@ -83,6 +83,22 @@ body {
 #dash-search-btn {
   background-color: #316a8c;
 }
+#skillSearchBtn {
+  background: #316a8c;
+  border: none;
+  color: #e9ede7;
+  margin: 10px 0;
+  font-weight: 350;
+}
+#skillSearchBtn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  color: #e9ede7;
+  font-weight: 350;
+}
+#generate-resume-btn {
+  margin-top: 60px;
+  background-color: #316a8c;
+}
 .index-text {
   font-size: 22px;
   padding: 8px;
@@ -97,8 +113,21 @@ body {
 hr {
   width: 80%;
 }
-.sign-up-hr {
+.search-hr {
   width: 100%;
+}
+.search-display {
+  font-size: 20px;
+  font-family: "Lato";
+}
+#allOfSkills {
+  margin: 10px 10px 20px 10px;
+}
+#allOfEdu {
+  margin: 10px 10px 20px 10px;
+}
+#allOfRef {
+  margin: 10px 10px 20px 10px;
 }
 #benefits-container {
   padding: 20px;
@@ -115,7 +144,7 @@ hr {
   background-color: #e9ede7;
   position: relative;
   height: 100%;
-  margin-top: 50px;
+  margin: 50px 0px;
   padding: 30px 1px 0 1px;
   border-radius: 25px;
 }
@@ -147,9 +176,23 @@ h2 {
   font-weight: 300;
   color: #17334a;
 }
+.search-headings {
+  text-align: initial;
+  font-size: 32px;
+}
+.result {
+  background-color: #fff;
+  color: #17334a;
+  padding-left: 5px;
+}
 @media screen and (max-width: 2000px) {
   .navbar-brand {
-    margin: 0 72% 0 2%;
+    margin: 0 73% 0 2%;
+  }
+}
+@media screen and (max-width: 1525px) {
+  .navbar-brand {
+    margin: 0 71% 0 2%;
   }
 }
 @media screen and (max-width: 1484px) {
