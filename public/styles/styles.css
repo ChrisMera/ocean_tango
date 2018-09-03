@@ -115,16 +115,9 @@ hr {
   background-color: #e9ede7;
   position: relative;
   height: 100%;
-  margin: 50px 0px;
+  margin: 40px 0px;
   padding: 30px 1px 0 1px;
   border-radius: 25px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  color: #e9ede7;
 }
 .dropdown-menu {
   background: #5096b8;
@@ -146,6 +139,12 @@ h2 {
   font-size: 50px;
   font-weight: 300;
   color: #17334a;
+}
+h5 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  color: #e9ede7;
 }
 @media screen and (max-width: 2000px) {
   .navbar-brand {
