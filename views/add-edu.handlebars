@@ -52,57 +52,61 @@
             </div>
           </div>
           <div class="form-row justify-content-center">
-            <div class="form-group col-md-6">
-              <label for="edu-start-input">Start Date</label>
-              <input type="text" class="form-control" id="edu-start-input" placeholder="03/01/18">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="edu-end-input">End Date</label>
-              <input type="text" class="form-control" id="edu-end-input" placeholder="08/01/18">
-            </div>
+            {{!-- <div class="form-group col-md-6">
+            <label for="inputEduLocation">Location</label>
+            <input type="text" class="form-control" id="inputEduLocation" placeholder="City, State">
+          </div> --}}
+          <div class="form-group col-md-6">
+            <label for="edu-start-input">Start Date</label>
+            <input type="text" class="form-control" id="edu-start-input" placeholder="03/01/18">
           </div>
-          <div class="form-row">
-            <div class="col-md-2">
-              <button type="submit" class="btn btn-md lgt-btn btn-block" data-toggle="modal" data-target="#exampleModalCenter">Add</button>
-            </div>
+          <div class="form-group col-md-6">
+            <label for="edu-end-input">End Date</label>
+            <input type="text" class="form-control" id="edu-end-input" placeholder="08/01/18">
           </div>
-        </form>
-      </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-md lgt-btn btn-block" data-toggle="modal" data-target="#exampleModalCenter">Add</button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
+</div>
 </div>
 
 
 <!-- MODAL -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle"><span class="modal-success">Success!</span><span class="modal-fail">Oops!</span></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <span class="modal-success">New Education Added!</span>
-        <span class="modal-fail">Please provide institution name.</span>
-      </div>
-      <div class="modal-footer">
-        <span class="modal-success">
-          <button type="button" class="btn btn-sm lgt-btn btn-block" data-dismiss="modal">Continue Adding
-          </button>
-          <a href="/searchjob"><button type="button" class="btn btn-sm drk-btn btn-block">See your entire list
-          </button></a>
-        </span>
-      </div>
-    </div>
-  </div>
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalCenterTitle"><span class="modal-success">Success!</span><span class="modal-fail">Oops!</span></h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
 </div>
-<!-- MODAL END -->
+<div class="modal-body">
+<span class="modal-success">New Education Added!</span>
+<span class="modal-fail">Please provide institution name.</span>
+</div>
+<div class="modal-footer">
+<span class="modal-success">
+<button type="button" class="btn btn-sm lgt-btn btn-block" data-dismiss="modal">Continue Adding
+</button>
+<a href="/searchjob"><button type="button" class="btn btn-sm drk-btn btn-block">See your entire list
+</button></a>
+</span>
+</div>
+</div>
+</div>
+</div>
+  <!-- MODAL END -->
 
 
-<!-- FOOTER -->
-<footer class="sticky-bottom text-center">
-  <h5 class="text-center">Skill Team 4 &copy2018 | <a class="github-link" href="https://github.com/bmjanuska/ocean_tango">Github Repo</a></h5>
-</footer>
-<!-- FOOTER END -->
+  <!-- FOOTER -->
+  <footer class="sticky-bottom text-center">
+    <h5 class="text-center">Skill Team 4 &copy2018 | <a class="github-link" href="https://github.com/bmjanuska/ocean_tango">Github Repo</a></h5>
+  </footer>
+  <!-- FOOTER END -->
