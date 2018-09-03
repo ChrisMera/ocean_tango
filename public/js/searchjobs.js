@@ -65,16 +65,14 @@ $(document).ready(function() {
   function createNewEduRow(edu) {
     var newEduRow = $(
       [
-        "<div>",
-        edu.school,
-        "</div>",
-        "<br>",
-        "<div>",
-        edu.startDate + " - " + edu.endDate,
-        "</div>",
-        "<br>",
-        "<div>",
-        edu.degree,
+        "<div class='result'>",
+        edu.school +
+          "   " +
+          edu.startDate +
+          " - " +
+          edu.endDate +
+          "  " +
+          edu.degree,
         "</div>",
         "<br>"
       ].join("")
@@ -105,15 +103,13 @@ $(document).ready(function() {
   function createNewRefRow(refs) {
     var newRefRow = $(
       [
-        "<div>",
+        "<div class='result'>",
         refs.name,
         "</div>",
-        "<br>",
-        "<div>",
+        "<div class='result'>",
         refs.relationship,
         "</div>",
-        "<br>",
-        "<div>",
+        "<div class='result'>",
         refs.phone,
         "</div>",
         "<br>"
