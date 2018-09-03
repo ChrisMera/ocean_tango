@@ -1,6 +1,6 @@
 <!-- NAV -->
 <nav class="navbar sticky-top navbar-expand-lg" id="navbar">
-    <a class="navbar-brand" href="/"><i class="far fa-building"></i> mySkills</a>
+  <a class="navbar-brand" href="/"><i class="far fa-building"></i> mySkills</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
   aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon">Menu</span>
@@ -39,15 +39,14 @@
     <div class="row">
       <div class="col-md-12" id="add-new-div">
         <form>
-
-            <div class="form-group">
-              <label for="ref-name-input">Reference Name</label>
-              <input type="text" class="form-control" id="ref-name-input" placeholder="Reference Name">
-            </div>
-            <div class="form-group">
-              <label for="ref-phone-input">Phone</label>
-              <input type="text" class="form-control" id="ref-phone-input" placeholder="Contact Number">
-            </div>
+          <div class="form-group">
+            <label for="ref-name-input">Reference Name</label>
+            <input type="text" class="form-control" id="ref-name-input" placeholder="Reference Name">
+          </div>
+          <div class="form-group">
+            <label for="ref-phone-input">Phone</label>
+            <input type="text" class="form-control" id="ref-phone-input" placeholder="Contact Number">
+          </div>
 
           <div class="for">
             <div class="form-group ">
@@ -55,47 +54,44 @@
               <input type="text" class="form-control" id="ref-rel-input" placeholder="Relationship">
             </div>
           </div>
-
           <div class="form-group">
             <div class="col">
               <button type="submit" class="btn btn-md lgt-btn btn-block" data-toggle="modal" data-target="#exampleModalCenter">Add</button>
             </div>
           </div>
-
         </form>
-
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalCenterTitle"><span class="modal-success">Success!</span><span class="modal-fail">Oops!</span></h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <span class="modal-success">New Reference Added!</span>
-                      <span class="modal-fail">Please provide reference name & contact number.</span>
-                    </div>
-                    <div class="modal-footer">
-                      <span class="modal-success">
-                        <button type="button" lass="btn btn-sm lgt-btn" data-dismiss="modal">Continue Adding
-                        </button>
-                        <a href="/searchjob"><button type="button" class="btn btn-sm drk-btn">See your entire list
-                        </button></a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </div>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle"><span class="modal-success">Success!</span><span class="modal-fail">Oops!</span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <span class="modal-success">New Reference Added!</span>
+        <span class="modal-fail">Please provide reference name & contact number.</span>
+      </div>
+      <div class="modal-footer">
+        <span class="modal-success">
+          <button type="button" lass="btn btn-sm lgt-btn" data-dismiss="modal">Continue Adding
+          </button>
+          <a href="/searchjob"><button type="button" class="btn btn-sm drk-btn">See your entire list
+          </button></a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL END -->
 
 <!-- FOOTER -->
 <footer class="sticky-bottom text-center">
