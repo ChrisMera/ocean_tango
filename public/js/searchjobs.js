@@ -1,4 +1,3 @@
-//div id="allOfSkills"
 //DOC READY
 $(document).ready(function() {
   var expKeyWord;
@@ -8,7 +7,7 @@ $(document).ready(function() {
   var jobs = [];
 
   function getJobs() {
-    $.get("/api/searchjob", function(data) {
+    $.get("/api/searchjob/" + expKeyWord, function(data) {
       jobs = data;
       initializeExpRows();
     });
@@ -48,7 +47,7 @@ $(document).ready(function() {
   var edu = [];
 
   function getEdu() {
-    $.get("/api/searchjob", function(data) {
+    $.get("/api/searchedu", function(data) {
       edu = data;
       initializeEduRows();
     });
@@ -75,7 +74,7 @@ $(document).ready(function() {
         "</div>",
         "<br>",
         "<div>",
-        jobs.description,
+        edu.degree,
         "</div>",
         "<br>"
       ].join("")
@@ -122,14 +121,29 @@ $(document).ready(function() {
     );
     return newRefRow;
   }
+  // var resNameDiv = $("#resName");
+  // var resPhoneDiv = $("#resPhone");
+  // var resEmailDiv = $("#resEmail");
+
+  // var user = [];
+  // function userData() {
+  //   $.get("/api/user", function(data) {
+  //     user = data;
+  //     // resNameDiv.prepend(user.name);
+  //     // resPhoneDiv.prepend(user.phone);
+  //     // resEmailDiv.prepend(user.email);
+  //     console.log(user);
+  //   });
+  // }
 
   //ONCLICK
   $("#skillSearchBtn").on("click", function() {
     console.log("click");
     expKeyWord = $("#skillSearch-input").val();
     console.log(expKeyWord);
-    getJobs();
+    getJobs(expKeyWord);
     getEdu();
     getRef();
+    // userData();
   });
 });
