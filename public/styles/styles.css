@@ -18,14 +18,6 @@ body {
 .navbar-brand {
   color: #e9ede7;
 }
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  color: #e9ede7;
-  margin-top: 100px;
-}
 .github-link {
   color: #e9ede7;
 }
@@ -121,12 +113,20 @@ hr {
 }
 .box {
   background-color: #e9ede7;
+  position: relative;
   height: 100%;
   margin-top: 50px;
-  padding: 30px 5px 0 5px;
+  padding: 30px 1px 0 1px;
   border-radius: 25px;
 }
-.show {
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #e9ede7;
+}
+.dropdown-menu {
   background: #5096b8;
   border: none;
 }
@@ -149,27 +149,27 @@ h2 {
 }
 @media screen and (max-width: 2000px) {
   .navbar-brand {
-    margin: 0 69% 0 3%;
+    margin: 0 72% 0 2%;
   }
 }
 @media screen and (max-width: 1484px) {
   .navbar-brand {
-    margin: 0 65% 0 3%;
+    margin: 0 69% 0 2%;
   }
 }
 @media screen and (max-width: 1370px) {
   .navbar-brand {
-    margin: 0 67% 0 1%;
+    margin: 0 69% 0 1%;
   }
 }
 @media screen and (max-width: 1303px) {
   .navbar-brand {
-    margin: 0 64% 0 1%;
+    margin: 0 66% 0 1%;
   }
 }
 @media screen and (max-width: 1201px) {
   .navbar-brand {
-    margin: 0 61% 0 1%;
+    margin: 0 63% 0 1%;
   }
   .index-text {
     font-size: 19px;
@@ -177,7 +177,7 @@ h2 {
   .dash-button {
     background-color: #53afb1;
     color: #e9ede7;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 350;
   }
   .dash-text {
@@ -194,17 +194,17 @@ h2 {
 }
 @media screen and (max-width: 1107px) {
   .navbar-brand {
-    margin: 0 58% 0 1%;
+    margin: 0 60% 0 1%;
   }
 }
 @media screen and (max-width: 1027px) {
   .navbar-brand {
-    margin: 0 56% 0 1%;
+    margin: 0 58% 0 1%;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 993px) {
   .navbar-brand {
-    margin: 0 78% 0 0%;
+    margin: 0 58% 0 0%;
   }
   .index-text {
     font-size: 21px;
@@ -227,6 +227,12 @@ h2 {
     color: #17334a;
     text-align: center;
   }
+  .fa-search {
+    display: none;
+  }
+  #search-text {
+    display: none;
+  }
   h1 {
     text-align: center;
     font-size: 50px;
@@ -248,5 +254,14 @@ h2 {
   }
   .index-button {
     margin-bottom: 20px;
+  }
+  .fa-plus-circle {
+    display: inline;
+  }
+  .fa-search {
+    display: inline;
+  }
+  #search-text {
+    display: inline;
   }
 }
