@@ -1,3 +1,4 @@
+/* COLOR PALLETE */
 body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
@@ -5,100 +6,62 @@ body {
   background-size: cover;
   height: 100vh;
 }
+hr {
+  width: 80%;
+}
+/* NAV */
 #navbar {
   background-color: #5096b8;
 }
 .nav-link {
-  color: #e9ede7;
   padding: 0;
 }
 .navbar-toggler {
   border: 1px solid #e9ede7;
 }
-.navbar-brand {
-  color: #e9ede7;
-}
-.github-link {
-  color: #e9ede7;
-}
-.github-link:hover {
-  color: #e9ede7;
-}
-#index-button-div {
-  margin: 20px auto 15px;
-}
-#dash-search {
-  margin-top: 30px;
-  margin-bottom: 0;
-  text-align: center;
-}
-.index-button {
-  background-color: #17334a;
-  color: #e9ede7;
-  font-size: 22px;
-  font-weight: 300;
-}
+.navbar-brand,
+.github-link,
+.github-link:hover,
+.dropdown-item,
+.nav-link,
+.index-button,
 .index-button:hover {
   color: #e9ede7;
 }
-.sign-up-btn {
-  background-color: #17334a;
-  color: #e9ede7;
-  font-size: 22px;
-  font-weight: 300;
-  margin-top: 25px;
-}
-.dash-button {
-  background-color: #53afb1;
-  color: #e9ede7;
-  font-size: 22px;
-  font-weight: 350;
-}
-.dash-button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  color: #e9ede7;
-}
-.add-new-btn {
-  background-color: #53afb1;
-  color: #e9ede7;
-  font-size: 18px;
-  font-weight: 350;
-}
-.add-new-btn:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  color: #e9ede7;
-}
-.continue-add-btn {
-  background-color: #53afb1;
-  color: #e9ede7;
-  font-size: 18px;
-  font-weight: 350;
-}
-.see-all-btn {
-  background-color: #316a8c;
-  color: #e9ede7;
-  font-size: 18px;
-  font-weight: 350;
-}
-#dash-search-btn {
-  background-color: #316a8c;
-}
-#skillSearchBtn {
-  background: #316a8c;
+.dropdown-menu {
+  background: #5096b8;
   border: none;
-  color: #e9ede7;
-  margin: 10px 0;
-  font-weight: 350;
 }
-#skillSearchBtn:hover {
+.dropdown-item {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+/* NAV END */
+/* BUTTONS */
+.lgt-btn {
+  text-align: center;
+  color: #e9ede7;
+  font-size: 20px;
+  font-weight: 350;
+  background-color: #53afb1;
+}
+.lgt-btn:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   color: #e9ede7;
-  font-weight: 350;
 }
-#generate-resume-btn {
-  margin-top: 60px;
+.drk-btn {
+  text-align: center;
+  color: #e9ede7;
+  font-size: 20px;
+  font-weight: 350;
   background-color: #316a8c;
 }
+.drk-btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  color: #e9ede7;
+}
+/* BUTTONS END */
+/* TYPOGRAPHY */
 .index-text {
   font-size: 22px;
   padding: 8px;
@@ -107,62 +70,13 @@ body {
 }
 .dash-text {
   font-size: 19px;
-  padding: 8px;
+  margin: 8px 5px;
   color: #17334a;
-}
-hr {
-  width: 80%;
-}
-.search-hr {
-  width: 100%;
-}
-.search-display {
-  font-size: 20px;
-  font-family: "Lato";
-}
-#allOfSkills {
-  margin: 10px 10px 20px 10px;
-}
-#allOfEdu {
-  margin: 10px 10px 20px 10px;
-}
-#allOfRef {
-  margin: 10px 10px 20px 10px;
-}
-#benefits-container {
-  padding: 20px;
-  display: flex;
-  font-size: 19px;
-  text-align: center;
 }
 .fa-check-circle {
   display: inline-block;
   font-size: 40px;
   color: #316a8c;
-}
-.box {
-  background-color: #e9ede7;
-  position: relative;
-  height: 100%;
-  margin: 50px 0px;
-  padding: 30px 1px 0 1px;
-  border-radius: 25px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  color: #e9ede7;
-}
-.dropdown-menu {
-  background: #5096b8;
-  border: none;
-}
-.dropdown-item {
-  color: #e9ede7;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
 }
 h1 {
   text-align: center;
@@ -176,23 +90,36 @@ h2 {
   font-weight: 300;
   color: #17334a;
 }
-.search-headings {
-  text-align: initial;
-  font-size: 32px;
+h5 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  color: #e9ede7;
 }
-.result {
-  background-color: #fff;
-  color: #17334a;
-  padding-left: 5px;
+/* TYPOGRAPHY END */
+/* CONTAINERS */
+.box {
+  background-color: #e9ede7;
+  position: relative;
+  height: 100%;
+  margin: 40px 0px;
+  padding: 30px 35px;
+  border-radius: 25px;
 }
+.sign-up-hr {
+  width: 100%;
+}
+#benefits-container {
+  padding: 20px;
+  display: flex;
+  font-size: 19px;
+  text-align: center;
+}
+/* CONTAINERS END */
+/* MEDIA QUERIES */
 @media screen and (max-width: 2000px) {
   .navbar-brand {
-    margin: 0 73% 0 2%;
-  }
-}
-@media screen and (max-width: 1525px) {
-  .navbar-brand {
-    margin: 0 71% 0 2%;
+    margin: 0 72% 0 2%;
   }
 }
 @media screen and (max-width: 1484px) {
@@ -225,7 +152,7 @@ h2 {
   }
   .dash-text {
     font-size: 18px;
-    padding: 8px;
+    margin: 8px 5px;
     color: #17334a;
   }
   h1 {
@@ -266,7 +193,7 @@ h2 {
   }
   .dash-text {
     font-size: 17px;
-    padding: 8px;
+    margin: 8px 5px;
     color: #17334a;
     text-align: center;
   }
@@ -308,3 +235,4 @@ h2 {
     display: inline;
   }
 }
+/* MEDIA QUERIES END */
