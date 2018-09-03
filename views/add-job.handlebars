@@ -32,7 +32,7 @@
   </nav>
 <!-- END NAV -->
 
-<div class="add-wrapper">
+
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -95,19 +95,22 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalCenterTitle">Success!</h5>
+                      <h5 class="modal-title" id="exampleModalCenterTitle"><span class="modal-success">Success!</span><span class="modal-fail">Oops!</span></h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
                     <div class="modal-body">
-                      New Job/Project Added!
+                      <span class="modal-success">New Job/Project Added!</span>
+                      <span class="modal-fail">Please provide job/project name & skills.</span>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-sm continue-add-btn" data-dismiss="modal">Continue
-                        Adding</button>
-                        <a href="/searchjob"><button type="button" class="btn btn-sm see-all-btn">See your entire
-                          list</button></a>
+                          <span class="modal-success">
+                            <button type="button" class="btn btn-sm continue-add-btn" data-dismiss="modal">Continue Adding
+                            </button> 
+                            <a href="/searchjob"><button type="button" class="btn btn-sm see-all-btn">See your entire list
+                            </button></a>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -118,7 +121,7 @@
           </div>
         </div>
       </div>
-    </div>
+   
 
 
     <footer class="footer">

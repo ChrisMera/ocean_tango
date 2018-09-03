@@ -20,7 +20,12 @@ $(document).ready(function() {
     console.log(userData);
 
     if (!userData.school) {
+      $(".modal-success").hide();
+      $(".modal-fail").show();
       return;
+    } else {
+      $(".modal-success").show();
+      $(".modal-fail").hide();
     }
     // If we have a school name, run the addEdu function
     addEdu(
