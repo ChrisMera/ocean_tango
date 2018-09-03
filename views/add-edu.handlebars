@@ -33,6 +33,7 @@
 </nav>
 <!-- END NAV -->
 
+
 <div class="container">
   <div class="box">
     <h1>Add your education</h1>
@@ -78,27 +79,29 @@
 
 <!-- MODAL -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Success!</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        New Education Added!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-sm lgt-btn btn-block" data-dismiss="modal">Continue
-          Adding
-        </button>
-        <a href="/searchjob"><button type="button" class="btn btn-sm drk-btn btn-block">See your entire
-          list</button></a>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalCenterTitle"><span class="modal-success">Success!</span><span class="modal-fail">Oops!</span></h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<span class="modal-success">New Education Added!</span>
+<span class="modal-fail">Please provide institution name.</span>
+</div>
+<div class="modal-footer">
+<span class="modal-success">
+<button type="button" class="btn btn-sm lgt-btn btn-block" data-dismiss="modal">Continue Adding
+</button>
+<a href="/searchjob"><button type="button" class="btn btn-sm drk-btn btn-block">See your entire list
+</button></a>
+</span>
+</div>
+</div>
+</div>
+</div>
   <!-- MODAL END -->
 
 

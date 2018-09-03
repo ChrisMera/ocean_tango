@@ -38,32 +38,37 @@
     <hr>
     <div class="row justify-content-center">
       <div class="col-md-9" id="add-new-div">
+      
+              <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="skillSearch-input">Search for a Skill, Reference, or Education</label>
+                    <input type="text" class="form-control" id="skillSearch-input" placeholder="Enter Search here">
+                      <button method="get" href="/api/searchjob" type="submit" id="skillSearchBtn" class="btn btn-sm lgt-btn"><i class="fas fa-search"></i> Search</button>
+                  </div>
+                </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="skillSearch-input">Search for a Skill, Reference, or Education</label>
-            <input type="text" class="form-control" id="skillSearch-input" placeholder="Enter Search here">
-            <br>
-            <button href="/api/searchjob" type="submit" id="skillSearchBtn" class="btn lgt-btn ">Search</button>
-          </div>
-        </div>
-        <hr>
-        <h1>Jobs/Projects</h1>
-        <div id="allOfSkills">
-          All Skills results are going to appear here
-        </div>
-        <h1>Education</h1>
-        <div id="allOfEdu">
-          All Education results are going to appear here
-        </div>
-        <h1>References</h1>
-        <div id="allOfRef">
-          All References results are going to appear here
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+                {{!-- <hr class="search-hr"> --}}
+                <h2 class="search-headings">Jobs/Projects</h2>
+                <hr class="search-hr">
+                <div id="allOfSkills">
+                  All Skills results are going to appear here
+                </div>
+                <h2 class="search-headings">Education</h2>
+                <hr class="search-hr">
+                <div id="allOfEdu">
+                  All Education results are going to appear here
+                </div>
+                <h2 class="search-headings">References</h2>
+                <hr class="search-hr">
+                <div id="allOfRef">
+                  All References results are going to appear here  
+                </div>
+                <a class="btn btn-lg dash-button btn-block" id="generate-resume-btn" href="/resume" role="button"><i class="far fa-file-alt"></i> Generate Resume</a>
+  
+              </div>
+            </div>
+
+
 
 
 

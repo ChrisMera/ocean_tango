@@ -63,8 +63,13 @@ module.exports = function(app) {
 
   //THIS IS WHAT YOU ARE WORKING ON JESSICA
   //========================================
-  app.get("/api/searchjob", function(req, res) {
-    db.Experience.findAll({}).then(function(dbExp) {
+  app.get("/api/searchjob/:asscSkills", function(req, res) {
+    db.Experience.findAll({
+      where: {
+        asscSkills: req.params.asscSkills
+      }
+    }).then(function(dbExp) {
+      console.log(req.params.asscskills);
       res.json(dbExp);
     });
   });
@@ -183,7 +188,7 @@ module.exports = function(app) {
   // ======================================================
   //find all from user table
   app.get("/api/user", function(req, res) {
-    db.User.findAll({}).then(function(dbUser) {
+    db.User.findOne({}).then(function(dbUser) {
       res.json(dbUser);
     });
   });
