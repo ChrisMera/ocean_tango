@@ -18,7 +18,12 @@ $(document).ready(function() {
     console.log(userData);
 
     if (!userData.name || !userData.phone) {
+      $(".modal-success").hide();
+      $(".modal-fail").show();
       return;
+    } else {
+      $(".modal-success").show();
+      $(".modal-fail").hide();
     }
     // If we have an project bame and asscSkill, run the addJob function
     addRef(userData.name, userData.phone, userData.relationship);

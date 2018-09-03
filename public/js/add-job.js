@@ -23,9 +23,14 @@ $(document).ready(function() {
       asscSkills: skillsInput.val().trim(),
       expType: typeInput.val()
     };
-    console.log("THIS IS A USER: " + userData);
+    console.log("THIS IS A JOB/PROJECT: " + userData);
     if (!userData.name || !userData.asscSkills) {
+      $(".modal-success").hide();
+      $(".modal-fail").show();
       return;
+    } else {
+      $(".modal-success").show();
+      $(".modal-fail").hide();
     }
     // If we have an project name and asscSkill, run the addJob function
     addJob(
