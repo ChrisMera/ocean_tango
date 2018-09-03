@@ -91,7 +91,7 @@ body {
 }
 .dash-text {
   font-size: 19px;
-  padding: 8px;
+  margin: 8px 5px;
   color: #17334a;
 }
 hr {
@@ -116,7 +116,7 @@ hr {
   position: relative;
   height: 100%;
   margin: 40px 0px;
-  padding: 30px 1px 0 1px;
+  padding: 30px 35px;
   border-radius: 25px;
 }
 .dropdown-menu {
@@ -181,7 +181,7 @@ h5 {
   }
   .dash-text {
     font-size: 18px;
-    padding: 8px;
+    margin: 8px 5px;
     color: #17334a;
   }
   h1 {
@@ -222,7 +222,7 @@ h5 {
   }
   .dash-text {
     font-size: 17px;
-    padding: 8px;
+    margin: 8px 5px;
     color: #17334a;
     text-align: center;
   }
