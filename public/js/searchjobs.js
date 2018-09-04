@@ -25,16 +25,18 @@ $(document).ready(function() {
   function createNewExpRow(jobs) {
     var newJobRow = $(
       [
-        "<div>",
+        "<div class='card'>",
+        "<div class='card-body'>",
+        "<h5 class='card-title'>",
         jobs.role,
-        "</div>",
-        "<br>",
-        "<div>",
+        "</h5>",
+        "<h6 class='card-subtitle mb-2 text-muted'>",
         jobs.startDate + " - " + jobs.endDate,
-        "</div>",
-        "<br>",
-        "<div>",
+        "</h6>",
+        "<p class='card-text'>",
         jobs.description,
+        "</p>",
+        "</div>",
         "</div>",
         "<br>"
       ].join("")
@@ -65,14 +67,18 @@ $(document).ready(function() {
   function createNewEduRow(edu) {
     var newEduRow = $(
       [
-        "<div class='result'>",
-        edu.school +
-          "   " +
-          edu.startDate +
-          " - " +
-          edu.endDate +
-          "  " +
-          edu.degree,
+        "<div class='card'>",
+        "<div class='card-body'>",
+        "<h5 class='card-title'>",
+        edu.school,
+        "</h5>",
+        "<h6 class='card-subtitle mb-2 text-muted'>",
+        edu.startDate + " - " + edu.endDate,
+        "</h6>",
+        "<p class='card-text'>",
+        edu.degree,
+        " </p >",
+        "</div>",
         "</div>",
         "<br>"
       ].join("")
@@ -103,14 +109,18 @@ $(document).ready(function() {
   function createNewRefRow(refs) {
     var newRefRow = $(
       [
-        "<div class='result'>",
+        "<div class='card'>",
+        "<div class='card-body'>",
+        "<h5 class='card-title'>",
         refs.name,
-        "</div>",
-        "<div class='result'>",
-        refs.relationship,
-        "</div>",
-        "<div class='result'>",
+        "</h5>",
+        "<h6 class='card-subtitle mb-2 text-muted'>",
         refs.phone,
+        "</h6>",
+        "<p class='card-text'>",
+        refs.relationship,
+        " </p >",
+        "</div>",
         "</div>",
         "<br>"
       ].join("")
