@@ -30,7 +30,6 @@ body {
 #dash-search {
   margin-top: 30px;
   margin-bottom: 0;
-  text-align: center;
 }
 .index-button {
   background-color: #17334a;
@@ -143,9 +142,8 @@ hr {
 .box {
   background-color: #e9ede7;
   position: relative;
-  height: 100%;
   margin: 50px 0px;
-  padding: 30px 1px 0 1px;
+  padding: 30px 1px 30px 1px;
   border-radius: 25px;
 }
 .footer {
@@ -154,6 +152,7 @@ hr {
   width: 100%;
   text-align: center;
   color: #e9ede7;
+  z-index: -1;
 }
 .dropdown-menu {
   background: #5096b8;
