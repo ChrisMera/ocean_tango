@@ -1,3 +1,29 @@
+/* GLOBAL COLOR VARIABLES - PART OF LESSCSS  */
+/* NAVBAR */
+#navbar {
+  background-color: #5096b8;
+}
+.nav-link {
+  color: #e9ede7;
+  padding: 0;
+}
+.navbar-toggler {
+  border: 1px solid #e9ede7;
+}
+.navbar-brand {
+  color: #e9ede7;
+}
+.dropdown-menu {
+  background: #5096b8;
+  border: none;
+}
+.dropdown-item {
+  color: #e9ede7;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+/* END NAVBAR */
+/* BODY & CONTENT ELEMENTS */
 html,
 body {
   font-family: "Lato", sans-serif;
@@ -17,25 +43,41 @@ body {
   padding: 50px 25px;
   font-family: Helvetica, Arial, sans-serif;
 }
-#navbar {
-  background-color: #5096b8;
+.box {
+  background-color: #e9ede7;
+  position: relative;
+  margin: 50px 0px;
+  padding: 30px 1px 30px 1px;
+  border-radius: 25px;
 }
-.nav-link {
-  color: #e9ede7;
-  padding: 0;
+.resume-subheading {
+  margin-bottom: 0px;
+  margin-top: 15px;
 }
-.navbar-toggler {
-  border: 1px solid #e9ede7;
+#resume-contact {
+  text-align: end;
+  font-size: 18px;
 }
-.navbar-brand {
-  color: #e9ede7;
+#allOfSkills {
+  margin: 10px 10px 20px 10px;
 }
-.github-link {
-  color: #e9ede7;
+#allOfEdu {
+  margin: 10px 10px 20px 10px;
 }
-.github-link:hover {
-  color: #e9ede7;
+#allOfRef {
+  margin: 10px 10px 20px 10px;
 }
+.search-headings {
+  text-align: initial;
+  font-size: 32px;
+}
+.result {
+  background-color: #fff;
+  color: #17334a;
+  padding-left: 5px;
+}
+/* END BODY & CONTENT ELEMENTS */
+/* BUTTONS */
 #index-button-div {
   margin: 20px auto 15px;
 }
@@ -110,17 +152,8 @@ body {
   margin-top: 60px;
   background-color: #316a8c;
 }
-.index-text {
-  font-size: 22px;
-  padding: 8px;
-  color: #17334a;
-  font-weight: 350;
-}
-.dash-text {
-  font-size: 19px;
-  padding: 8px;
-  color: #17334a;
-}
+/* END BUTTONS */
+/* HR HTML ELEMENTS */
 hr {
   width: 80%;
 }
@@ -141,64 +174,31 @@ hr {
   background-color: #333;
   margin: 0px;
 }
-.resume-subheading {
-  margin-bottom: 0px;
-  margin-top: 15px;
+/* END HR HTML ELEMENTS */
+/* TEXT */
+.index-text {
+  font-size: 22px;
+  padding: 8px;
+  color: #17334a;
+  font-weight: 350;
+}
+.dash-text {
+  font-size: 19px;
+  padding: 8px;
+  color: #17334a;
 }
 .resume-text {
   margin-bottom: 0;
 }
-#resume-contact {
-  text-align: end;
-  font-size: 18px;
-}
 .search-display {
   font-size: 20px;
   font-family: "Lato";
-}
-#allOfSkills {
-  margin: 10px 10px 20px 10px;
-}
-#allOfEdu {
-  margin: 10px 10px 20px 10px;
-}
-#allOfRef {
-  margin: 10px 10px 20px 10px;
 }
 #benefits-container {
   padding: 20px;
   display: flex;
   font-size: 19px;
   text-align: center;
-}
-.fa-check-circle {
-  display: inline-block;
-  font-size: 40px;
-  color: #316a8c;
-}
-.box {
-  background-color: #e9ede7;
-  position: relative;
-  margin: 50px 0px;
-  padding: 30px 1px 30px 1px;
-  border-radius: 25px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  color: #e9ede7;
-  height: 60px;
-}
-.dropdown-menu {
-  background: #5096b8;
-  border: none;
-}
-.dropdown-item {
-  color: #e9ede7;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
 }
 h1 {
   text-align: center;
@@ -212,15 +212,31 @@ h2 {
   font-weight: 300;
   color: #17334a;
 }
-.search-headings {
-  text-align: initial;
-  font-size: 32px;
+/* END TEXT */
+/* FONT AWESOME ELEMENTS */
+.fa-check-circle {
+  display: inline-block;
+  font-size: 40px;
+  color: #316a8c;
 }
-.result {
-  background-color: #fff;
-  color: #17334a;
-  padding-left: 5px;
+/* END FONT AWESOME ELEMENTS */
+/* FOOTER */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #e9ede7;
+  height: 60px;
 }
+.github-link {
+  color: #e9ede7;
+}
+.github-link:hover {
+  color: #e9ede7;
+}
+/* END FOOTER */
+/* MEDIA QUERIES */
 @media screen and (max-width: 2000px) {
   .navbar-brand {
     margin: 0 73% 0 2%;
@@ -325,6 +341,9 @@ h2 {
   }
 }
 @media screen and (max-width: 767px) {
+  .box {
+    padding: 30px 10px 30px 10px;
+  }
   .welcome-msg {
     display: none;
   }
@@ -344,3 +363,4 @@ h2 {
     display: inline;
   }
 }
+/* END MEDIA QUERIES */
