@@ -61,7 +61,7 @@ module.exports = function(app) {
   // ======================================================
   //find all from experience table
 
-  //THIS IS WHAT YOU ARE WORKING ON JESSICA
+  //
   //========================================
   app.get("/api/searchjob/:asscSkills", function(req, res) {
     db.Experience.findAll({
@@ -254,6 +254,7 @@ module.exports = function(app) {
   });
 
   app.post("/api/select/exp/:id", function(req, res) {
+    console.log(req.params.id);
     db.Experience.update(
       {
         selected: true
@@ -263,8 +264,8 @@ module.exports = function(app) {
           id: req.params.id
         }
       }
-    ).then(function(dbEdu) {
-      res.json(dbEdu);
+    ).then(function(dbExp) {
+      res.json(dbExp);
     });
   });
 
@@ -278,8 +279,8 @@ module.exports = function(app) {
           id: req.params.id
         }
       }
-    ).then(function(dbEdu) {
-      res.json(dbEdu);
+    ).then(function(dbRef) {
+      res.json(dbRef);
     });
   });
 };

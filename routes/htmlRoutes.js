@@ -63,7 +63,7 @@ module.exports = function(app) {
   app.get("/resume", function(req, res) {
     var data = {};
     db.Experiences.findAll({}).then(function(result) {
-      data.expriences = result;
+      data.experiences = result;
       res.render("resume", data);
       console.log(data);
     });
