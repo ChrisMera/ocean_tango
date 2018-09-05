@@ -150,7 +150,11 @@ body {
 }
 #generate-resume-btn {
   margin-top: 60px;
+  color: #e9ede7;
   background-color: #316a8c;
+}
+#generate-resume-btn:hover {
+  color: #e9ede7;
 }
 /* END BUTTONS */
 /* HR HTML ELEMENTS */
