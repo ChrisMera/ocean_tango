@@ -36,7 +36,7 @@ $(document).ready(function() {
         "<p class='card-text'>",
         jobs.description,
         "</p>",
-        "<button data-id='" + exp.id + "' class='selectExp btn btn-primary'>",
+        "<button data-id='" + jobs.id + "'class='selectExp btn btn-primary'>",
         "+",
         "</button>",
         "</div>",
@@ -127,7 +127,6 @@ $(document).ready(function() {
         refs.relationship,
         " </p >",
         "<button data-id=''" + refs.id + "' class='selectRef btn btn-primary'>",
-
         "+",
         "</button>",
         "</div>",
