@@ -61,7 +61,6 @@ module.exports = function(app) {
       data.education = result;
       res.render("resume", data);
       console.log(data);
-
     });
   });
   // Render 404 page for any unmatched routes
