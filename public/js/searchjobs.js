@@ -139,12 +139,16 @@ $(document).ready(function() {
 
   //ONCLICK
   $("#skillSearchBtn").on("click", function() {
-    console.log("click");
-    expKeyWord = $("#skillSearch-input").val();
-    console.log(expKeyWord);
-    getJobs(expKeyWord);
-    getEdu();
-    getRef();
+    var searchVal = $("#skillSearch-input").val();
+    if (searchVal !== "") {
+      console.log("click");
+      expKeyWord = $("#skillSearch-input").val();
+      console.log(expKeyWord);
+      getJobs(expKeyWord);
+      getEdu();
+      getRef();
+      $("#skillSearch-input").val("");
+    }
     // userData();
   });
 
