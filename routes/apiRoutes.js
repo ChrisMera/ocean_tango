@@ -48,6 +48,7 @@ module.exports = function(app) {
   app.put("/api/edu", function(req, res) {
     db.Education.update(
       {
+        UserId: activeID,
         school: req.body.school,
         degree: req.body.degree,
         startDate: req.body.startDate,
@@ -82,7 +83,8 @@ module.exports = function(app) {
   app.get("/api/searchedu", function(req, res) {
     db.Education.findAll({
       where: {
-        UserId: req.user.id
+        UserId: activeID,
+        include: [db.User]
       }
     }).then(function(dbEdu) {
       res.json(dbEdu);
@@ -92,7 +94,8 @@ module.exports = function(app) {
   app.get("/api/searchref", function(req, res) {
     db.References.findAll({
       where: {
-        UserId: activeID
+        UserId: activeID,
+        include: [db.User]
       }
     }).then(function(dbRef) {
       res.json(dbRef);
@@ -101,7 +104,7 @@ module.exports = function(app) {
 
   //create for experience table
   app.post("/api/exp", function(req, res) {
-    console.log("this is activeID " + activeID);
+    console.log("Experience Table Active ID " + activeID);
     db.Experience.create({
       name: req.body.name,
       UserId: activeID,
@@ -160,8 +163,10 @@ module.exports = function(app) {
   });
   //create for references table
   app.post("/api/ref", function(req, res) {
+    console.log("References Table Active ID " + activeID);
     db.References.create({
       name: req.body.name,
+      UserId: activeID,
       phone: req.body.phone,
       relationship: req.body.relationship
     }).then(function(dbRef) {
@@ -184,6 +189,7 @@ module.exports = function(app) {
       .update(
         {
           name: req.body.name,
+          UserId: activeID,
           phone: req.body.phone,
           relationship: req.body.relationship
         },
