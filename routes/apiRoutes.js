@@ -19,6 +19,7 @@ module.exports = function(app) {
   });
   //create for education table
   app.post("/api/edu", function(req, res) {
+    console.log("This is the user " + JSON.stringify(req.user));
     db.Education.create(
       {
         userId: activeID,
@@ -107,10 +108,10 @@ module.exports = function(app) {
 
   //create for experience table
   app.post("/api/exp", function(req, res) {
-    console.log("this is activeID" + req.user.id);
+    console.log("this is activeID " + activeID);
     db.Experience.create({
       name: req.body.name,
-      userId: req.user.id,
+      UserId: activeID,
       role: req.body.role,
       description: req.body.description,
       startDate: req.body.startDate,
@@ -218,7 +219,13 @@ module.exports = function(app) {
     });
   });
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
-    db.User.findOne({}).then(function(dbUser) {
+    var user = req.user;
+    console.log("The User " + user);
+    db.User.findOne({
+      where: {
+        id: user.id
+      }
+    }).then(function(dbUser) {
       activeID = dbUser.id;
       console.log("here is active id" + activeID);
       res.json("/dashboard");
