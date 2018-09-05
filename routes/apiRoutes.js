@@ -253,7 +253,7 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/select/exp:id", function(req, res) {
+  app.post("/api/select/exp/:id", function(req, res) {
     db.Experience.update(
       {
         selected: true
@@ -268,7 +268,7 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/select/ref:id", function(req, res) {
+  app.post("/api/select/ref/:id", function(req, res) {
     db.References.update(
       {
         selected: true
