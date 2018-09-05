@@ -76,6 +76,13 @@ body {
   color: #17334a;
   padding-left: 5px;
 }
+#summary-text {
+  border: none;
+  font-family: inherit;
+  font-weight: 300;
+  width: 100%;
+  resize: none;
+}
 /* END BODY & CONTENT ELEMENTS */
 /* BUTTONS */
 #index-button-div {
@@ -148,9 +155,31 @@ body {
   color: #e9ede7;
   font-weight: 350;
 }
+.selectExp,
+.selectEdu,
+.selectRef {
+  background-color: #53afb1;
+  color: #e9ede7;
+  border: none;
+}
+.selectExp:hover,
+.selectEdu:hover,
+.selectRef:hover {
+  background-color: #316a8c;
+  color: #e9ede7;
+  border: none;
+}
 #generate-resume-btn {
   margin-top: 60px;
+  color: #e9ede7;
   background-color: #316a8c;
+}
+#generate-resume-btn:hover {
+  color: #e9ede7;
+}
+#pdf {
+  background: white;
+  border: none;
 }
 /* END BUTTONS */
 /* HR HTML ELEMENTS */

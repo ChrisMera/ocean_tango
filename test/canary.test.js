@@ -7,3 +7,5 @@ describe("canary test", function() {
     expect(true).to.be.true;
   });
 });
+
+// run testing with 'npm run test' in CLI
