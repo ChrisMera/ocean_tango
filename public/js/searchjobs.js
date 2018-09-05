@@ -36,6 +36,9 @@ $(document).ready(function() {
         "<p class='card-text'>",
         jobs.description,
         "</p>",
+        "<button class='btn btn-primary'>",
+        "+",
+        "</button>",
         "</div>",
         "</div>",
         "<br>"
@@ -78,6 +81,9 @@ $(document).ready(function() {
         "<p class='card-text'>",
         edu.degree,
         " </p >",
+        "<button data-id='" + edu.id + "' class='selectEdu btn btn-primary'>",
+        "+",
+        "</button>",
         "</div>",
         "</div>",
         "<br>"
@@ -120,6 +126,9 @@ $(document).ready(function() {
         "<p class='card-text'>",
         refs.relationship,
         " </p >",
+        "<button class='btn btn-primary'>",
+        "+",
+        "</button>",
         "</div>",
         "</div>",
         "<br>"
@@ -127,20 +136,6 @@ $(document).ready(function() {
     );
     return newRefRow;
   }
-  // var resNameDiv = $("#resName");
-  // var resPhoneDiv = $("#resPhone");
-  // var resEmailDiv = $("#resEmail");
-
-  // var user = [];
-  // function userData() {
-  //   $.get("/api/user", function(data) {
-  //     user = data;
-  //     // resNameDiv.prepend(user.name);
-  //     // resPhoneDiv.prepend(user.phone);
-  //     // resEmailDiv.prepend(user.email);
-  //     console.log(user);
-  //   });
-  // }
 
   //ONCLICK
   $("#skillSearchBtn").on("click", function() {
@@ -151,5 +146,14 @@ $(document).ready(function() {
     getEdu();
     getRef();
     // userData();
+  });
+
+  $(document).on("click", ".selectEdu", function() {
+    console.log("click");
+    var id = $(this).data("id");
+    console.log(id);
+    $.post("/api/select/edu/" + id).then(function(res) {
+      console.log(res);
+    });
   });
 });

@@ -9,7 +9,11 @@ module.exports = function(sequelize, DataTypes) {
     startDate: {
       type: DataTypes.DATEONLY
     },
-    endDate: DataTypes.DATEONLY
+    endDate: DataTypes.DATEONLY,
+    selected: {
+      type: DataTypes.BOOLEAN,
+      default: false
+    }
   });
   return Education;
 };
