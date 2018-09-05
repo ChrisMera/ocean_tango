@@ -1,12 +1,12 @@
 <!-- CONTENT -->
-<div class="resume-wrapper">
+<div id="wrapper" style="background-color:white" class="resume-wrapper">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div id="resume-name">
           <!-- User Name goes here-->
           <!-- I put "John Doe" as an example -->
-          <h4>John Doe</h4>
+          <h4><button id="pdf"href="/resume">John Doe</button></h4>
           <hr class="resume-hr">
           <hr class="resume-hr">
         </div>
@@ -35,27 +35,27 @@
         <div id="resume-experience">
           <h5 class="resume-subheading">Experience</h5>
           <hr class="resume-hr-2">
-          {{#each experience}}
+          {{#each experiences}}
           {{#if this.selected}}
           <p class="resume-text">{{this.name}}</p>
           {{/if}}
           {{/each}}
-          {{#each experience}}
+          {{#each experiences}}
           {{#if this.selected}}
           <p class="resume-text">{{this.role}}</p>
           {{/if}}
           {{/each}}
-          {{#each experience}}
+          {{#each experiences}}
           {{#if this.selected}}
           <p class="resume-text">{{this.startDate}}</p>
           {{/if}}
           {{/each}}
-          {{#each experience}}
+          {{#each experiences}}
           {{#if this.selected}}
           <p class="resume-text">{{this.endDate}}</p>
           {{/if}}
           {{/each}}
-          {{#each experience}}
+          {{#each experiences}}
           {{#if this.selected}}
           <p class="resume-text">{{this.description}}</p>
           {{/if}}
@@ -72,12 +72,12 @@
           {{/each}}
           {{#each education}}
           {{#if this.selected}}
-          <p>{{this.endDate}}</p>
+          <p class="resume-text">{{this.endDate}}</p>
           {{/if}}
           {{/each}}
           {{#each education}}
           {{#if this.selected}}
-          <p>{{this.degree}}</p>
+          <p class="resume-text">{{this.degree}}</p>
           {{/if}}
           {{/each}}
           <!-- User skills goes here-->

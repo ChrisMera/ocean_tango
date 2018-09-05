@@ -279,7 +279,8 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/select/exp:id", function(req, res) {
+  app.post("/api/select/exp/:id", function(req, res) {
+    console.log(req.params.id);
     db.Experience.update(
       {
         selected: true
@@ -289,12 +290,12 @@ module.exports = function(app) {
           id: req.params.id
         }
       }
-    ).then(function(dbEdu) {
-      res.json(dbEdu);
+    ).then(function(dbExp) {
+      res.json(dbExp);
     });
   });
 
-  app.post("/api/select/ref:id", function(req, res) {
+  app.post("/api/select/ref/:id", function(req, res) {
     db.References.update(
       {
         selected: true
@@ -304,8 +305,8 @@ module.exports = function(app) {
           id: req.params.id
         }
       }
-    ).then(function(dbEdu) {
-      res.json(dbEdu);
+    ).then(function(dbRef) {
+      res.json(dbRef);
     });
   });
 };
