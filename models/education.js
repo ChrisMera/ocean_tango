@@ -15,5 +15,23 @@ module.exports = function(sequelize, DataTypes) {
       default: false
     }
   });
+  Education.associate = function(models) {
+    // We're saying that a Education should belong to an User
+    // A education can't be created without a User due to the foreign key constraint
+    Education.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+  Education.associate = function(models) {
+    // We're saying that a Education should belong to an User
+    // A education can't be created without a User due to the foreign key constraint
+    Education.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Education;
 };

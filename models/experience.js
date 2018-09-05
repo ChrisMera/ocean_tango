@@ -26,5 +26,14 @@ module.exports = function(sequelize, DataTypes) {
       default: false
     }
   });
+  Experience.associate = function(models) {
+    // We're saying that a Experience should belong to an User
+    // A Experience can't be created without a User due to the foreign key constraint
+    Experience.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Experience;
 };
