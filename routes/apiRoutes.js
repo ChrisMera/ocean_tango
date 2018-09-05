@@ -19,18 +19,13 @@ module.exports = function(app) {
   //create for education table
   app.post("/api/edu", function(req, res) {
     console.log("This is the user " + JSON.stringify(req.user));
-    db.Education.create(
-      {
-        UserId: activeID,
-        school: req.body.school,
-        degree: req.body.degree,
-        startDate: req.body.startDate,
-        endDate: req.body.endDate
-      },
-      {
-        include: [db.User]
-      }
-    ).then(function(dbEdu) {
+    db.Education.create({
+      UserId: activeID,
+      school: req.body.school,
+      degree: req.body.degree,
+      startDate: req.body.startDate,
+      endDate: req.body.endDate
+    }).then(function(dbEdu) {
       res.json(dbEdu);
     });
   });
@@ -71,11 +66,9 @@ module.exports = function(app) {
   app.get("/api/searchjob/:asscSkills", function(req, res) {
     db.Experience.findAll({
       where: {
-        asscSkills: req.params.asscSkills,
-        include: [db.User]
+        asscSkills: req.params.asscSkills
       }
     }).then(function(dbExp) {
-      console.log(req.params.asscskills);
       res.json(dbExp);
     });
   });
@@ -83,8 +76,7 @@ module.exports = function(app) {
   app.get("/api/searchedu", function(req, res) {
     db.Education.findAll({
       where: {
-        UserId: activeID,
-        include: [db.User]
+        UserId: activeID
       }
     }).then(function(dbEdu) {
       res.json(dbEdu);
@@ -94,8 +86,7 @@ module.exports = function(app) {
   app.get("/api/searchref", function(req, res) {
     db.References.findAll({
       where: {
-        UserId: activeID,
-        include: [db.User]
+        UserId: activeID
       }
     }).then(function(dbRef) {
       res.json(dbRef);
