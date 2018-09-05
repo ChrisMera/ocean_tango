@@ -20,7 +20,11 @@ module.exports = function(sequelize, DataTypes) {
     asscSkills: {
       type: DataTypes.STRING
     },
-    expType: DataTypes.STRING
+    expType: DataTypes.STRING,
+    selected: {
+      type: DataTypes.BOOLEAN,
+      default: false
+    }
   });
   return Experience;
 };

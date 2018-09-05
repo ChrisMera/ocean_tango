@@ -12,6 +12,10 @@ module.exports = function(sequelize, DataTypes) {
     relationship: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    selected: {
+      type: DataTypes.BOOLEAN,
+      default: false
     }
   });
   return References;

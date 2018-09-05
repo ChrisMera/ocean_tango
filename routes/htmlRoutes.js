@@ -2,8 +2,7 @@
 // ======================================================
 // Requiring path to so we can use relative routes to our HTML files
 // var path = require("path");
-
-// Requiring our custom middleware for checking if a user is logged in
+var db = require("../models"); // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 // REQUIRE END
 // ======================================================
@@ -50,8 +49,20 @@ module.exports = function(app) {
   app.get("/searchjob", function(req, res) {
     res.render("searchjob");
   });
+
+  // app.get("/api/edu", function(req, res) {
+  //   db.Education.findAll({}).then(function(dbEdu) {
+  //     res.json(dbEdu);
+  //   });
+
   app.get("/resume", function(req, res) {
-    res.render("resume");
+    var data = {};
+    db.Education.findAll({}).then(function(result) {
+      data.education = result;
+      res.render("resume", data);
+      console.log(data);
+
+    });
   });
   // Render 404 page for any unmatched routes
   app.get("/objective", function(req, res) {

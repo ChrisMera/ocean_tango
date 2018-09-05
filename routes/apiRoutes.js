@@ -236,4 +236,50 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.post("/api/select/edu/:id", function(req, res) {
+    console.log(req.params.id);
+    db.Education.update(
+      {
+        selected: true
+      },
+      {
+        where: {
+          id: req.params.id
+        }
+      }
+    ).then(function(dbEdu) {
+      res.json(dbEdu);
+    });
+  });
+
+  app.post("/api/select/exp:id", function(req, res) {
+    db.Experience.update(
+      {
+        selected: true
+      },
+      {
+        where: {
+          id: req.params.id
+        }
+      }
+    ).then(function(dbEdu) {
+      res.json(dbEdu);
+    });
+  });
+
+  app.post("/api/select/ref:id", function(req, res) {
+    db.References.update(
+      {
+        selected: true
+      },
+      {
+        where: {
+          id: req.params.id
+        }
+      }
+    ).then(function(dbEdu) {
+      res.json(dbEdu);
+    });
+  });
 };
