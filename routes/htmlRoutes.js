@@ -50,20 +50,34 @@ module.exports = function(app) {
     res.render("searchjob");
   });
 
-  // app.get("/api/edu", function(req, res) {
-  //   db.Education.findAll({}).then(function(dbEdu) {
-  //     res.json(dbEdu);
-  //   });
-
+  //displaying on resume page
   app.get("/resume", function(req, res) {
     var data = {};
     db.Education.findAll({}).then(function(result) {
       data.education = result;
       res.render("resume", data);
       console.log(data);
-
     });
   });
+
+  app.get("/resume", function(req, res) {
+    var data = {};
+    db.Experiences.findAll({}).then(function(result) {
+      data.expriences = result;
+      res.render("resume", data);
+      console.log(data);
+    });
+  });
+
+  app.get("/resume", function(req, res) {
+    var data = {};
+    db.References.findAll({}).then(function(result) {
+      data.references = result;
+      res.render("resume", data);
+      console.log(data);
+    });
+  });
+
   // Render 404 page for any unmatched routes
   app.get("/objective", function(req, res) {
     res.render("objective");

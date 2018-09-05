@@ -21,7 +21,9 @@
         <div id="resume-summary">
           <h5 class="resume-subheading">Professional Summary</h5>
           <hr class="resume-hr-2">
-          <p class="resume-text">User summary go here</p>
+          <br>
+          <textarea maxlength="500" rows="8" cols="55" placeholder="A brief summary of your skills and accomplishents ..."> 
+          </textarea>
           <!-- User skills goes here-->
         </div>
         <div id="resume-skills">
@@ -33,7 +35,31 @@
         <div id="resume-experience">
           <h5 class="resume-subheading">Experience</h5>
           <hr class="resume-hr-2">
-          <p class="resume-text">User experience will go here</p>
+          {{#each experience}}
+          {{#if this.selected}}
+          <p class="resume-text">{{this.name}}</p>
+          {{/if}}
+          {{/each}}
+          {{#each experience}}
+          {{#if this.selected}}
+          <p class="resume-text">{{this.role}}</p>
+          {{/if}}
+          {{/each}}
+          {{#each experience}}
+          {{#if this.selected}}
+          <p class="resume-text">{{this.startDate}}</p>
+          {{/if}}
+          {{/each}}
+          {{#each experience}}
+          {{#if this.selected}}
+          <p class="resume-text">{{this.endDate}}</p>
+          {{/if}}
+          {{/each}}
+          {{#each experience}}
+          {{#if this.selected}}
+          <p class="resume-text">{{this.description}}</p>
+          {{/if}}
+          {{/each}}
           <!-- User skills goes here-->
         </div>
         <div id="resume-education">
@@ -44,8 +70,16 @@
           <p class="resume-text">{{this.school}}</p>
           {{/if}}
           {{/each}}
-          <p></p>
-          <p></p>
+          {{#each education}}
+          {{#if this.selected}}
+          <p>{{this.endDate}}</p>
+          {{/if}}
+          {{/each}}
+          {{#each education}}
+          {{#if this.selected}}
+          <p>{{this.degree}}</p>
+          {{/if}}
+          {{/each}}
           <!-- User skills goes here-->
         </div> 
       </div>
