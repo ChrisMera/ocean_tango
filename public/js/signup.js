@@ -59,8 +59,7 @@ $(document).ready(function() {
     // .catch(handleLoginErr);
   }
 
-  // function handleLoginErr(err) {
-  //   $("#alert .msg").text(err.responseJSON);
-  //   $("#alert").fadeIn(500);
-  // }
+  $.get("/api/user_data").then(function(data) {
+    console.log("ID of USER " + JSON.stringify(data.id));
+  });
 });

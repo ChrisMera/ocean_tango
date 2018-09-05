@@ -2,6 +2,7 @@
 // ======================================================
 var db = require("../models");
 var passport = require("../config/passport");
+var activeID;
 // REQUIRE END
 // ======================================================
 
@@ -18,12 +19,18 @@ module.exports = function(app) {
   });
   //create for education table
   app.post("/api/edu", function(req, res) {
-    db.Education.create({
-      school: req.body.school,
-      degree: req.body.degree,
-      startDate: req.body.startDate,
-      endDate: req.body.endDate
-    }).then(function(dbEdu) {
+    db.Education.create(
+      {
+        userId: activeID,
+        school: req.body.school,
+        degree: req.body.degree,
+        startDate: req.body.startDate,
+        endDate: req.body.endDate
+      },
+      {
+        include: [db.User]
+      }
+    ).then(function(dbEdu) {
       res.json(dbEdu);
     });
   });
@@ -41,6 +48,7 @@ module.exports = function(app) {
   app.put("/api/edu", function(req, res) {
     db.Education.update(
       {
+        userId: activeID,
         school: req.body.school,
         degree: req.body.degree,
         startDate: req.body.startDate,
@@ -66,22 +74,32 @@ module.exports = function(app) {
   app.get("/api/searchjob/:asscSkills", function(req, res) {
     db.Experience.findAll({
       where: {
-        asscSkills: req.params.asscSkills
+        asscSkills: req.params.asscSkills,
+        include: [db.User]
       }
     }).then(function(dbExp) {
-      console.log(req.params.asscskills);
+      console.log(dbExp);
       res.json(dbExp);
     });
   });
   //RETURNING DATA FROM EXPERIENCE TABLE IN DB
   app.get("/api/searchedu", function(req, res) {
-    db.Education.findAll({}).then(function(dbEdu) {
+    db.Education.findAll({
+      where: {
+        userId: req.user.id
+      }
+    }).then(function(dbEdu) {
       res.json(dbEdu);
     });
   });
 
-  app.get("/api/searchref", function(req, res) {
-    db.References.findAll({}).then(function(dbRef) {
+  app.get("/api/searchref/:id", function(req, res) {
+    //for user specific data
+    db.References.findAll({
+      where: {
+        userId: activeID
+      }
+    }).then(function(dbRef) {
       res.json(dbRef);
     });
   });
@@ -89,8 +107,10 @@ module.exports = function(app) {
 
   //create for experience table
   app.post("/api/exp", function(req, res) {
+    console.log("this is activeID" + req.user.id);
     db.Experience.create({
       name: req.body.name,
+      userId: req.user.id,
       role: req.body.role,
       description: req.body.description,
       startDate: req.body.startDate,
@@ -116,6 +136,7 @@ module.exports = function(app) {
     db.Experience.update(
       {
         name: req.body.name,
+        userId: activeID,
         role: req.body.role,
         description: req.body.description,
         startDate: req.body.startDate,
@@ -164,24 +185,24 @@ module.exports = function(app) {
     });
   });
   //update for references table
-  app.put("/api/ref", function(req, res) {
-    db.references
-      .update(
-        {
-          name: req.body.name,
-          phone: req.body.phone,
-          relationship: req.body.relationship
-        },
-        {
-          where: {
-            id: req.body.id
-          }
-        }
-      )
-      .then(function(dbRef) {
-        res.json(dbRef);
-      });
-  });
+  // p.put("/api/ref", function(req, res) {
+  //   references
+  //   .update(
+  //     {
+  //       name: req.body.name,
+  //       phone: req.body.phone,
+  //       relationship: req.body.relationship
+  //     },
+  //     {
+  //       where: {
+  //         id: req.body.id
+  //       }
+  //     }
+  //   )
+  //   .then(function(dbRef) {
+  //     res.json(dbRef);
+  //   });
+  // });
   // REFERENCES END
   // ======================================================
   // USER
@@ -189,11 +210,19 @@ module.exports = function(app) {
   //find all from user table
   app.get("/api/user", function(req, res) {
     db.User.findOne({}).then(function(dbUser) {
+      console.log("THIS IS THE DBUSER" + dbUser);
+      // Making the variable activeID come from the users id in db
+      activeID = dbUser.id;
+      console.log("here is active id " + activeID);
       res.json(dbUser);
     });
   });
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
-    res.json("/dashboard");
+    db.User.findOne({}).then(function(dbUser) {
+      activeID = dbUser.id;
+      console.log("here is active id" + activeID);
+      res.json("/dashboard");
+    });
   });
 
   app.post("/api/signup", function(req, res) {
@@ -231,9 +260,10 @@ module.exports = function(app) {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
-        name: req.user.email,
+        name: req.user.name,
         id: req.user.id
       });
+      console.log("Data Name from API " + req.user.name);
     }
   });
 };

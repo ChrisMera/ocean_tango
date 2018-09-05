@@ -14,10 +14,10 @@ module.exports = function(sequelize, DataTypes) {
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true
-      }
+      unique: true
+      // validate: {
+      //   isEmail: true
+      // }
     },
     // The password cannot be null
     password: {
@@ -49,29 +49,19 @@ module.exports = function(sequelize, DataTypes) {
       null
     );
   });
+  User.associate = function(models) {
+    // Associating User with -----
+    User.hasMany(models.Experience, {
+      onDelete: "cascade"
+    });
+    // When an User is deleted, also delete any associated Posts
+    User.hasMany(models.Education, {
+      onDelete: "cascade"
+    });
+
+    User.hasMany(models.References, {
+      onDelete: "cascade"
+    });
+  };
   return User;
 };
-
-// //model for user demographic table
-// module.exports = function(sequelize, DataTypes) {
-//   var User = sequelize.define("User", {
-//     name: {
-//       type: DataTypes.STRING,
-//       allowNull: false
-//     },
-//     address: {
-//       type: DataTypes.STRING,
-//       allowNull: false
-//     },
-//     phone: {
-//       type: DataTypes.INTEGER,
-//       allowNull: false
-//     },
-//     email: {
-//       type: DataTypes.STRING,
-//       allowNull: false
-//     },
-//     url: DataTypes.STRING
-//   });
-//   return User;
-// };
