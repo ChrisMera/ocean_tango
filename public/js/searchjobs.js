@@ -36,7 +36,7 @@ $(document).ready(function() {
         "<p class='card-text'>",
         jobs.description,
         "</p>",
-        "<button class='btn btn-primary'>",
+        "<button data-id='" + exp.id + "' class='selectExp btn btn-primary'>",
         "+",
         "</button>",
         "</div>",
@@ -126,7 +126,8 @@ $(document).ready(function() {
         "<p class='card-text'>",
         refs.relationship,
         " </p >",
-        "<button class='btn btn-primary'>",
+        "<button data-id=''" + refs.id + "' class='selectRef btn btn-primary'>",
+
         "+",
         "</button>",
         "</div>",
@@ -149,14 +150,31 @@ $(document).ready(function() {
       getRef();
       $("#skillSearch-input").val("");
     }
-    // userData();
   });
-
+  //displaying on resume page
   $(document).on("click", ".selectEdu", function() {
     console.log("click");
     var id = $(this).data("id");
     console.log(id);
     $.post("/api/select/edu/" + id).then(function(res) {
+      console.log(res);
+    });
+  });
+
+  $(document).on("click", ".selectExp", function() {
+    console.log("click");
+    var id = $(this).data("id");
+    console.log(id);
+    $.post("/api/select/exp/" + id).then(function(res) {
+      console.log(res);
+    });
+  });
+
+  $(document).on("click", ".selectRef", function() {
+    console.log("click");
+    var id = $(this).data("id");
+    console.log(id);
+    $.post("/api/select/ref/" + id).then(function(res) {
       console.log(res);
     });
   });
