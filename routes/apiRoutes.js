@@ -22,7 +22,7 @@ module.exports = function(app) {
     console.log("This is the user " + JSON.stringify(req.user));
     db.Education.create(
       {
-        userId: activeID,
+        UserId: activeID,
         school: req.body.school,
         degree: req.body.degree,
         startDate: req.body.startDate,
@@ -49,7 +49,7 @@ module.exports = function(app) {
   app.put("/api/edu", function(req, res) {
     db.Education.update(
       {
-        userId: activeID,
+        UserId: activeID,
         school: req.body.school,
         degree: req.body.degree,
         startDate: req.body.startDate,
@@ -87,7 +87,7 @@ module.exports = function(app) {
   app.get("/api/searchedu", function(req, res) {
     db.Education.findAll({
       where: {
-        userId: req.user.id
+        UserId: req.user.id
       }
     }).then(function(dbEdu) {
       res.json(dbEdu);
@@ -98,7 +98,7 @@ module.exports = function(app) {
     //for user specific data
     db.References.findAll({
       where: {
-        userId: activeID
+        UserId: activeID
       }
     }).then(function(dbRef) {
       res.json(dbRef);
@@ -137,7 +137,7 @@ module.exports = function(app) {
     db.Experience.update(
       {
         name: req.body.name,
-        userId: activeID,
+        UserId: activeID,
         role: req.body.role,
         description: req.body.description,
         startDate: req.body.startDate,
