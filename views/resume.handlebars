@@ -13,11 +13,9 @@
         </div>
         <div id="resume-contact">
           <!-- User Address goes here-->
-          <!-- I put sample address as an example -->
           {{#each user}}
           <p class="resume-text">{{this.address}}</p>
           <!-- User Contact Info goes here-->
-          <!-- I put sample contact as an example -->
           <p class="resume-text">{{this.phone}} | {{this.email}}</p>
           {{/each}}
         </div>
@@ -28,6 +26,7 @@
           <textarea class="form-control" id="summary-text" rows="3" placeholder="Type your professional summary here..."></textarea>
           <!-- User Experience goes here-->
         </div>
+
         <div id="resume-experience">
           <h5 class="resume-subheading">Experience</h5>
           <hr class="resume-hr-2">
