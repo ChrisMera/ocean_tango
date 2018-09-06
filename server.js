@@ -4,6 +4,7 @@ var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var session = require("express-session");
 var passport = require("./config/passport");
+var mysql = require("mysql2");
 
 var db = require("./models");
 
