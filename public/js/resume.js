@@ -1,5 +1,4 @@
 var doc = new jsPDF();
-
 function genPDF() {
   var divHeight = $("#wrapper").height();
   var divWidth = $("#wrapper").width();
