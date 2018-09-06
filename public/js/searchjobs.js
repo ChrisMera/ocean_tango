@@ -113,6 +113,7 @@ $(document).ready(function() {
   }
 
   function createNewRefRow(refs) {
+    console.log("ref " + JSON.stringify(refs));
     var newRefRow = $(
       [
         "<div class='card'>",
@@ -126,7 +127,7 @@ $(document).ready(function() {
         "<p class='card-text'>",
         refs.relationship,
         " </p >",
-        "<button data-id=''" + refs.id + "' class='selectRef btn btn-primary'>",
+        "<button data-id='" + refs.id + "' class='selectRef btn btn-primary'>",
         "+",
         "</button>",
         "</div>",
@@ -172,7 +173,7 @@ $(document).ready(function() {
   $(document).on("click", ".selectRef", function() {
     console.log("click");
     var id = $(this).data("id");
-    console.log(id);
+    console.log("The Id!! " + id);
     $.post("/api/select/ref/" + id).then(function(res) {
       console.log(res);
     });
