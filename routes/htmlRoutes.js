@@ -52,24 +52,10 @@ module.exports = function(app) {
   app.get("/resume", function(req, res) {
     console.log("Req user " + req.user.id);
     var data = {};
-    db.Education.findAll({
-      where: {
-        UserId: req.user.id
-      }
-    }).then(function(result) {
-      data.education = result;
-      db.Experience.findAll({
-        where: {
-          UserId: req.user.id
-        }
-      }).then(function(result) {
-        data.experiences = result;
-        db.References.findAll({
-          where: {
-            UserId: req.user.id
-          }
-        }).then(function(result) {
-          data.references = result;
+    db.Users.findAll({where:{UserId: req.user.id}}).then(function(result){data.user = result;
+      db.Education.findAll({where: {UserId: req.user.id}}).then(function(result) {data.education = result;
+      db.Experience.findAll({where: {UserId: req.user.id}}).then(function(result) {data.experiences = result;
+        db.References.findAll({where: {UserId: req.user.id}}).then(function(result) {data.references = result;
           res.render("resume", data);
           console.log(data);
         });
