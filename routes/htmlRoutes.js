@@ -87,6 +87,15 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/resume", function(req, res) {
+    var data = {};
+    db.Users.findAll({}).then(function(result) {
+      data.user = result;
+      res.render("resume", data);
+      console.log(data);
+    });
+  });
+
   // Render 404 page for any unmatched routes
   app.get("/objective", function(req, res) {
     res.render("objective");

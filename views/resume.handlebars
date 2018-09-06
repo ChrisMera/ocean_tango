@@ -6,17 +6,21 @@
         <div id="resume-name">
           <!-- User Name goes here-->
           <!-- I put "John Doe" as an example -->
-          <h4><button id="pdf" href="/resume">John Doe</button></h4>
+          {{#each user}}
+          <h4><button id="pdf" href="/resume">{{this.name}}</button></h4>
+          {{/each}}
           <hr class="resume-hr">
           <hr class="resume-hr">
         </div>
         <div id="resume-contact">
           <!-- User Address goes here-->
           <!-- I put sample address as an example -->
-          <p class="resume-text">1234 Any St. Anywhere, USA 11111</p>
+          {{#each user}}
+          <p class="resume-text">{{this.adress}}</p>
           <!-- User Contact Info goes here-->
           <!-- I put sample contact as an example -->
-          <p class="resume-text">555-555-5555 | test@email.com</p>
+          <p class="resume-text">{{this.phone}} | {{this.email}}</p>
+          {{/each}}
         </div>
         <div id="resume-summary">
           <h5 class="resume-subheading">Professional Summary</h5>
