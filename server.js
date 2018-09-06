@@ -38,9 +38,15 @@ var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
-if (process.env.NODE_ENV === "test") {
-  // needs to be set to 'true' below for testing
-  syncOptions.force = false;
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "root",
+    database: "passport_demo"
+  });
 }
 
 // Starting the server, syncing our models ------------------------------------/
