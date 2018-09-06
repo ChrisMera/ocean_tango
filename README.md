@@ -1,19 +1,23 @@
 # mySkills Resume Builder
 Web application that builds resumes. 
 
+!["App Screenshot"](public/images/app_screenshot.png)
+
 ## Resume Building Made Easy 
 - - - - 
-Problem: 
-Building tailored resumes can be stressful and time consuming. 
+Challenge:
+
+When applying for a new job, it is recommended to tailor resumes to the specifics of the job description. Building tailored resumes can be stressful and time consuming. 
 
 Solution:
-MySkills App will store user inputs for Past Experience, References & Education in one place. Craft resumes that are specific to job postings with keyword search of posted skills and export to a PDF.
+
+mySkills Resume Builder stores user information for jobs, education and references in one place to easily create a tailored resume. Keyword search of skills will return all relevant experience and will be added at user discretion to a PDF. 
 
 ## To get started, visit our site and create an account. 
 - - - - 
 Link to deployed project: 
 
-!["App Screenshot"](public/images/app_screenshot.png)
+!["App Screenshot"](public/images/howTo.png)
 
 
 ## Tech Used:
@@ -44,3 +48,11 @@ Link to deployed project:
     * GitHub
     * ESLint
     * Travis CI
+
+## Contributors:
+- - - - 
+[Christopher Mera] (https://github.com/ChrisMera)
+
+[Bernadette Januska] (https://github.com/bmjanuska)
+
+[Jessica Howard] (https://github.com/jessicahoward)
