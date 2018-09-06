@@ -4,22 +4,18 @@
     <div class="row">
       <div class="col-md-12">
         <div id="resume-name">
-          <!-- User Name goes here-->
-          <!-- I put "John Doe" as an example -->
+
           {{#each user}}
           <h4><button id="pdf" href="/resume">{{this.name}}</button></h4>
-{{!-- one small change --}}
           {{/each}}
           <hr class="resume-hr">
           <hr class="resume-hr">
         </div>
         <div id="resume-contact">
           <!-- User Address goes here-->
-          <!-- I put sample address as an example -->
           {{#each user}}
           <p class="resume-text">{{this.adress}}</p>
           <!-- User Contact Info goes here-->
-          <!-- I put sample contact as an example -->
           <p class="resume-text">{{this.phone}} | {{this.email}}</p>
           {{/each}}
         </div>
@@ -28,14 +24,8 @@
           <hr class="resume-hr-2">
           <br>
           <textarea class="form-control" id="summary-text" rows="3" placeholder="Type your professional summary here..."></textarea>
-          <!-- User skills goes here-->
         </div>
-        <div id="resume-skills">
-          <h5 class="resume-subheading">Skills</h5>
-          <hr class="resume-hr-2">
-          <p class="resume-text">User skills will go here</p>
-          <!-- User skills goes here-->
-        </div>
+
         <div id="resume-experience">
           <h5 class="resume-subheading">Experience</h5>
           <hr class="resume-hr-2">
@@ -48,7 +38,6 @@
           <p class="resume-text">{{this.description}}</p>
           {{/if}}
           {{/each}}
-          <!-- User skills goes here-->
         </div>
         <div id="resume-education">
           <h5 class="resume-subheading">Education</h5>
@@ -60,7 +49,6 @@
           <p class="resume-text">{{this.degree}}</p>
           {{/if}}
           {{/each}}
-          <!-- User skills goes here-->
         </div>
         <div id="resume-reference">
           <h5 class="resume-subheading">References</h5>
@@ -72,7 +60,6 @@
           <p class="resume-text">{{this.relationship}}</p>
           {{/if}}
           {{/each}}
-          <!-- User ref goes here-->
         </div>
       </div>
     </div>
