@@ -32,6 +32,21 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       }
     });
+    ///YOU ARE HERE+++++
+    // .hasMany(models.Project, {
+    //   as: "collaboratorId",
+    //   foreignKey: "collaboratorId"
+    // });
+    // User.hasMany(models.Project, {
+    //   as: "ownerId",
+    //   foreignKey: "ownerId"
+    // });
+    // User.hasMany(models.Messages, {
+    //   onDelete: "cascade"
+    // });
+    // User.hasMany(models.Skill, {
+    //   onDelete: "cascade"
+    // });
   };
   return Education;
 };

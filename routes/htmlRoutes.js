@@ -51,6 +51,15 @@ module.exports = function(app) {
   });
 
   //displaying on resume page
+  // app.get("/resume", function(req, res) {
+  //   var data = {};
+  //   db.Education.findAll({}).then(function(result) {
+  //     data.education = result;
+  //     res.render("resume", data);
+  //     console.log(data);
+  //   });
+  // });
+
   app.get("/resume", function(req, res) {
     var data = {};
     db.Education.findAll({}).then(function(result) {
