@@ -49,50 +49,31 @@ module.exports = function(app) {
   app.get("/searchjob", function(req, res) {
     res.render("searchjob");
   });
-
-  //displaying on resume page
-  // app.get("/resume", function(req, res) {
-  //   var data = {};
-  //   db.Education.findAll({}).then(function(result) {
-  //     data.education = result;
-  //     res.render("resume", data);
-  //     console.log(data);
-  //   });
-  // });
-
   app.get("/resume", function(req, res) {
+    console.log("Req user " + req.user.id);
     var data = {};
-    db.Education.findAll({}).then(function(result) {
+    db.Education.findAll({
+      where: {
+        UserId: req.user.id
+      }
+    }).then(function(result) {
       data.education = result;
-      res.render("resume", data);
-      console.log(data);
-    });
-  });
-
-  app.get("/resume", function(req, res) {
-    var data = {};
-    db.Experiences.findAll({}).then(function(result) {
-      data.experiences = result;
-      res.render("resume", data);
-      console.log(data);
-    });
-  });
-
-  app.get("/resume", function(req, res) {
-    var data = {};
-    db.References.findAll({}).then(function(result) {
-      data.references = result;
-      res.render("resume", data);
-      console.log(data);
-    });
-  });
-
-  app.get("/resume", function(req, res) {
-    var data = {};
-    db.Users.findAll({}).then(function(result) {
-      data.user = result;
-      res.render("resume", data);
-      console.log(data);
+      db.Experience.findAll({
+        where: {
+          UserId: req.user.id
+        }
+      }).then(function(result) {
+        data.experiences = result;
+        db.References.findAll({
+          where: {
+            UserId: req.user.id
+          }
+        }).then(function(result) {
+          data.references = result;
+          res.render("resume", data);
+          console.log(data);
+        });
+      });
     });
   });
 
@@ -100,13 +81,11 @@ module.exports = function(app) {
   app.get("/objective", function(req, res) {
     res.render("objective");
   });
-
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function(req, res) {
     res.redirect("/dashboard");
   });
-
   app.get("*", function(req, res) {
     res.render("404");
   });
