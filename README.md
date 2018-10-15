@@ -9,7 +9,7 @@ This web application allows users to search their job experiences by keywords so
 
 ## Getting started is easy - simply visit the website, create an account, and start adding your job experiences, education, and references.
 
-Click [here]() to get started.
+Click [here](https://pacific-cove-65481.herokuapp.com/) to get started.
 
 ![Splash Page](public/images/app_screenshot.png)
 
