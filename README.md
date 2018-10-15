@@ -1,27 +1,22 @@
 # mySkills Resume Builder
-Web application that builds resumes.
+Web application that generates tailored resumes.
 
-!["App Screenshot"](public/images/app_screenshot.png)
+## Professional Resume Tailoring Made Easy
 
-## Resume Building Made Easy
-- - - -
-Challenge:
+mySkills Resume Builder allows users to store all of their job experiences, education, and references in one place so that they can come back to it whenever they need to build a tailored resume. 
 
-When applying for a new job, it is recommended to tailor resumes to the specifics of the job description. Building tailored resumes can be stressful and time consuming.
+This web application allows users to search their job experiences by keywords so that they can then build a tailored resume geared towards the job they are applying for. The user can then select the specific experiences, education, and references that they would like to add to their tailored resume. mySkills Resume Builder streamlines the resume building process for anyone who needs a tailored resume.
 
-Solution:
+## Getting started is easy - simply visit the website, create an account, and start adding your job experiences, education, and references.
 
-mySkills Resume Builder stores user information for jobs, education and references in one place to easily create a tailored resume. Keyword search of skills will return all relevant experience and will be added at user discretion to a PDF.
+Click [here]() to get started.
 
-## To get started, visit our site and create an account.
-- - - -
-[Deployed on Heroku](https://protected-wildwood-20402.herokuapp.com/)
+![Splash Page](public/images/app_screenshot.png)
 
 !["App Screenshot"](public/images/howTo.png)
 
 
 ## Tech Used:
-- - - -
 * Web Technologies & Frameworks:
     * HTML5
     * Bootstrap
@@ -50,10 +45,10 @@ mySkills Resume Builder stores user information for jobs, education and referenc
     * Travis CI
 
 ## Contributors:
-- - - -
+
+[Chris Mera] (https://github.com/ChrisMera)
 
 [Bernadette Januska] (https://github.com/bmjanuska)
 
 [Jessica Howard] (https://github.com/jessicahoward)
 
-[Christopher Mera] (https://github.com/ChrisMera)
