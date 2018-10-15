@@ -46,9 +46,10 @@ Click [here]() to get started.
 
 ## Contributors:
 
-[Chris Mera] (https://github.com/ChrisMera)
+[Chris Mera] - UI/UX Design (https://github.com/ChrisMera)
 
-[Bernadette Januska] (https://github.com/bmjanuska)
+[Jessica Howard] - Database Configuration, Routing (https://github.com/jessicahoward)
 
-[Jessica Howard] (https://github.com/jessicahoward)
+[Bernadette Januska] - Account Validation, Database (https://github.com/bmjanuska)
+
 
